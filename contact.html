@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Shivayan Trails — Plan Your Himalayan Adventure</title>
+    <meta name="description" content="Get in touch with Shivayan Trails to plan your perfect Himalayan trek, getaway, or Dham Yatra. 24/7 support. Call, email, or WhatsApp us today.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" id="nav-logo">
+                <div class="logo-icon"><i data-lucide="mountain-snow"></i></div>
+                <span class="logo-text">Shivayan Trails</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="treks.html" class="nav-link">Treks</a></li>
+                <li><a href="getaways.html" class="nav-link">Getaways</a></li>
+                <li><a href="dham-yatra.html" class="nav-link">Dham Yatra</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="https://wa.me/919058344407" target="_blank" class="nav-cta">
+                    <i data-lucide="message-circle"></i><span>WhatsApp</span>
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- CONTACT HERO -->
+    <section class="contact-hero">
+        <div class="contact-hero-bg">
+            <div class="contact-hero-overlay"></div>
+        </div>
+        <div class="contact-hero-content" data-animate="fade-up">
+            <nav class="breadcrumb">
+                <a href="index.html">Home</a>
+                <i data-lucide="chevron-right"></i>
+                <span>Contact</span>
+            </nav>
+            <span class="section-tag">Get In Touch</span>
+            <h1>Let's Plan Your Next<br><span class="gradient-text">Himalayan Adventure</span></h1>
+            <p>Have questions? Ready to book? Our team responds within 2 hours.</p>
+        </div>
+    </section>
+
+
+    <!-- CONTACT INFO CARDS -->
+    <section class="contact-info-section">
+        <div class="container">
+            <div class="contact-cards">
+                <a href="tel:+919058344407" class="contact-info-card" data-animate="fade-up">
+                    <div class="contact-card-icon">
+                        <i data-lucide="phone"></i>
+                    </div>
+                    <h3>Call Us</h3>
+                    <p class="contact-value">+91-9058344407</p>
+                    <span class="contact-note">Available 9 AM – 9 PM IST</span>
+                </a>
+                
+                <a href="mailto:shivayantrails@gmail.com" class="contact-info-card" data-animate="fade-up" data-delay="100">
+                    <div class="contact-card-icon">
+                        <i data-lucide="mail"></i>
+                    </div>
+                    <h3>Email Us</h3>
+                    <p class="contact-value">shivayantrails@gmail.com</p>
+                    <span class="contact-note">We reply within 2 hours</span>
+                </a>
+                
+                <a href="https://wa.me/919058344407" target="_blank" class="contact-info-card contact-info-card--whatsapp" data-animate="fade-up" data-delay="200">
+                    <div class="contact-card-icon">
+                        <i data-lucide="message-circle"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p class="contact-value">Chat with us instantly</p>
+                    <span class="contact-note">Quick replies, 24/7</span>
+                </a>
+                
+                <div class="contact-info-card" data-animate="fade-up" data-delay="300">
+                    <div class="contact-card-icon">
+                        <i data-lucide="map-pin"></i>
+                    </div>
+                    <h3>Office</h3>
+                    <p class="contact-value">Dehradun, Uttarakhand</p>
+                    <span class="contact-note">India — 248001</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CONTACT FORM + MAP -->
+    <section class="contact-main">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Form -->
+                <div class="contact-form-wrapper" data-animate="fade-up">
+                    <h2>Send Us a Message</h2>
+                    <p>Tell us about your dream trip and we'll craft the perfect itinerary.</p>
+                    
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-name">Full Name *</label>
+                                <input type="text" id="contact-name" placeholder="Your full name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-phone">Phone Number *</label>
+                                <input type="tel" id="contact-phone" placeholder="+91-XXXXXXXXXX" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-email">Email Address *</label>
+                            <input type="email" id="contact-email" placeholder="your@email.com" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="contact-interest">Interested In</label>
+                                <select id="contact-interest">
+                                    <option value="" disabled selected>Choose a category</option>
+                                    <option value="trek">Treks</option>
+                                    <option value="getaway">Getaways</option>
+                                    <option value="dham-yatra">Dham Yatra</option>
+                                    <option value="custom">Custom Trip</option>
+                                    <option value="group">Group / Corporate</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-group-size">Group Size</label>
+                                <select id="contact-group-size">
+                                    <option value="" disabled selected>How many people?</option>
+                                    <option value="solo">Solo (1)</option>
+                                    <option value="couple">Couple (2)</option>
+                                    <option value="small">Small Group (3-6)</option>
+                                    <option value="medium">Medium Group (7-15)</option>
+                                    <option value="large">Large Group (16+)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-dates">Preferred Travel Dates</label>
+                            <input type="text" id="contact-dates" placeholder="e.g., September 15-20, 2026 (flexible)">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="contact-message">Your Message *</label>
+                            <textarea id="contact-message" rows="4" placeholder="Tell us about your ideal trip — destinations, preferences, budget, any special requirements..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full" id="contact-submit">
+                            <i data-lucide="send"></i> Send Message
+                        </button>
+                        
+                        <p class="form-disclaimer">
+                            <i data-lucide="shield-check"></i>
+                            Your information is secure. We'll respond within 2 hours during business hours.
+                        </p>
+                    </form>
+                </div>
+                
+                <!-- Map & Extras -->
+                <div class="contact-sidebar" data-animate="fade-up" data-delay="200">
+                    <div class="map-wrapper">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220848.67890273916!2d77.86800707036688!3d30.316495472429367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c356c888af%3A0x4c3562c032518799!2sDehradun%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="300" 
+                            style="border:0; border-radius: var(--radius-xl);" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Shivayan Trails office location"
+                        ></iframe>
+                    </div>
+                    
+                    <div class="contact-faq">
+                        <h3>Frequently Asked Questions</h3>
+                        
+                        <details class="faq-item">
+                            <summary>How do I book a trek?</summary>
+                            <p>You can book by sending us a WhatsApp message, filling out this form, or calling us directly. We'll confirm availability and guide you through the process.</p>
+                        </details>
+                        
+                        <details class="faq-item">
+                            <summary>What's included in the package price?</summary>
+                            <p>Most packages include accommodation, meals, guide fees, permits, and transportation from the base camp. Specific inclusions vary by package — check individual pages for details.</p>
+                        </details>
+                        
+                        <details class="faq-item">
+                            <summary>Can I customize a trip?</summary>
+                            <p>Absolutely! We specialize in custom trips for families, groups, and corporate teams. Tell us your preferences and we'll design the perfect itinerary.</p>
+                        </details>
+                        
+                        <details class="faq-item">
+                            <summary>What's the cancellation policy?</summary>
+                            <p>We offer flexible cancellation. Full refund if cancelled 15+ days before departure, 50% refund for 7-14 days, and case-by-case for shorter notice.</p>
+                        </details>
+                    </div>
+                    
+                    <div class="contact-social-strip">
+                        <h3>Follow Our Adventures</h3>
+                        <div class="social-links-row">
+                            <a href="#" class="social-link-large" aria-label="Instagram">
+                                <i data-lucide="instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a href="#" class="social-link-large" aria-label="Facebook">
+                                <i data-lucide="facebook"></i>
+                                <span>Facebook</span>
+                            </a>
+                            <a href="#" class="social-link-large" aria-label="YouTube">
+                                <i data-lucide="youtube"></i>
+                                <span>YouTube</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer class="footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-icon"><i data-lucide="mountain-snow"></i></div>
+                        <span>Shivayan Trails</span>
+                    </a>
+                    <p>Curated Himalayan experiences — treks, getaways, and sacred journeys crafted with care.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="Instagram" class="social-link"><i data-lucide="instagram"></i></a>
+                        <a href="#" aria-label="Facebook" class="social-link"><i data-lucide="facebook"></i></a>
+                        <a href="#" aria-label="YouTube" class="social-link"><i data-lucide="youtube"></i></a>
+                        <a href="#" aria-label="LinkedIn" class="social-link"><i data-lucide="linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Explore</h4>
+                    <ul>
+                        <li><a href="treks.html">Treks</a></li>
+                        <li><a href="getaways.html">Getaways</a></li>
+                        <li><a href="dham-yatra.html">Dham Yatra</a></li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="terms.html">Terms & Conditions</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                        <li><a href="refund.html">Cancellation Policy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Updated</h4>
+                    <p>Get trek updates, offers & travel inspiration.</p>
+                    <form class="newsletter-form" id="newsletter-form">
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit"><i data-lucide="send"></i></button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Shivayan Trails. All rights reserved.</p>
+                <p>Developed by <a href="https://codesaint.in" target="_blank">Codesaint Technologies Pvt. Ltd.</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i data-lucide="chevron-up"></i></button>
+    <a href="https://wa.me/919058344407" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i data-lucide="message-circle"></i>
+        <span class="whatsapp-tooltip">Chat with us!</span>
+    </a>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Contact form handling
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const btn = document.getElementById('contact-submit');
+                const original = btn.innerHTML;
+                
+                btn.innerHTML = '<i data-lucide="check-circle"></i> Message Sent!';
+                btn.style.background = '#25D366';
+                btn.disabled = true;
+                
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+                
+                setTimeout(() => {
+                    btn.innerHTML = original;
+                    btn.style.background = '';
+                    btn.disabled = false;
+                    contactForm.reset();
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                }, 3000);
+            });
+        }
+    </script>
+</body>
+</html>
