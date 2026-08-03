@@ -40,30 +40,38 @@ function initPageLoader() {
     if (!loader) return;
     
     let progress = 0;
-    const interval = setInterval(() => {
-        progress += Math.floor(Math.random() * 18) + 8;
-        if (progress >= 100) {
-            progress = 100;
-            clearInterval(interval);
-            
-            if (bar) bar.style.width = '100%';
-            if (percentText) percentText.textContent = '100%';
-            
+    let isFinished = false;
+
+    function finishLoading() {
+        if (isFinished) return;
+        isFinished = true;
+
+        if (bar) bar.style.width = '100%';
+        if (percentText) percentText.textContent = '100%';
+
+        setTimeout(() => {
+            loader.classList.add('loaded');
+            document.body.style.overflow = '';
             setTimeout(() => {
-                loader.classList.add('loaded');
-                setTimeout(() => {
-                    if (loader.parentNode) loader.remove();
-                }, 1200);
-            }, 350);
+                if (loader.parentNode) loader.remove();
+            }, 800);
+        }, 150);
+    }
+    
+    const interval = setInterval(() => {
+        progress += Math.floor(Math.random() * 25) + 15;
+        if (progress >= 100) {
+            clearInterval(interval);
+            finishLoading();
         } else {
             if (bar) bar.style.width = progress + '%';
             if (percentText) percentText.textContent = progress + '%';
         }
-    }, 50);
+    }, 40);
 
-    window.addEventListener('load', () => {
-        progress = Math.max(progress, 90);
-    });
+    window.addEventListener('load', finishLoading);
+    // Mobile safety fallback (1.6s max)
+    setTimeout(finishLoading, 1600);
 }
 
 
