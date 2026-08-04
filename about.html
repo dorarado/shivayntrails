@@ -16,8 +16,28 @@
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/advanced.css">
 </head>
 <body>
+
+    <!-- SEAMLESS CINEMATIC CURTAIN LOADER -->
+    <div class="page-loader" id="page-loader">
+        <div class="loader-curtain curtain-left"></div>
+        <div class="loader-curtain curtain-right"></div>
+        <div class="loader-inner">
+            <div class="loader-crest">
+                <i data-lucide="mountain-snow"></i>
+            </div>
+            <h2 class="loader-brand">SHIVAYAN TRAILS</h2>
+            <p class="loader-tagline">SACRED HIMALAYAN EXPEDITIONS</p>
+            <div class="loader-progress-track">
+                <div class="loader-progress-bar" id="loader-progress-bar"></div>
+            </div>
+            <div class="loader-status">
+                <span class="loader-percent" id="loader-percent">0%</span>
+            </div>
+        </div>
+    </div>
 
     <!-- NAVBAR -->
     <nav class="navbar scrolled" id="navbar">
@@ -414,5 +434,6 @@
     </a>
 
     <script src="js/main.js"></script>
+    <script src="js/advanced.js"></script>
 </body>
 </html>
