@@ -238,7 +238,7 @@ function initBackToTop() {
 
 
 /* ─────────────────────────────────────────────────
-   HERO SEARCH
+   HERO & DESTINATION SEARCH (Light Themed)
    ───────────────────────────────────────────────── */
 function initHeroSearch() {
     const input = document.getElementById('hero-search-input');
@@ -263,74 +263,84 @@ function initHeroSearch() {
         { name: 'Char Dham Yatra', url: 'dham-yatra.html?slug=char-dham', icon: 'landmark' },
     ];
     
-    input.addEventListener('input', (e) => {
-        const query = e.target.value.toLowerCase().trim();
+    const renderSuggestions = (query = '') => {
+        const trimmed = query.toLowerCase().trim();
         
-        if (query.length === 0) {
+        if (trimmed.length === 0) {
             suggestions.innerHTML = `
                 <div class="suggestion-group">
-                    <span class="suggestion-label">Popular</span>
+                    <span class="suggestion-label">Popular Destinations</span>
                     ${destinations.slice(0, 4).map(d => `
                         <a href="${d.url}" class="suggestion-item">
-                            <i data-lucide="${d.icon}"></i> ${d.name}
+                            <i data-lucide="${d.icon}"></i> <span>${d.name}</span>
                         </a>
                     `).join('')}
                 </div>
             `;
+            suggestions.classList.add('active');
             if (typeof lucide !== 'undefined') lucide.createIcons();
             return;
         }
         
-        const filtered = destinations.filter(d => d.name.toLowerCase().includes(query));
+        const filtered = destinations.filter(d => d.name.toLowerCase().includes(trimmed));
         
         if (filtered.length > 0) {
             suggestions.innerHTML = `
                 <div class="suggestion-group">
-                    <span class="suggestion-label">Results</span>
+                    <span class="suggestion-label">Matching Destinations</span>
                     ${filtered.map(d => `
                         <a href="${d.url}" class="suggestion-item">
-                            <i data-lucide="${d.icon}"></i> ${highlightMatch(d.name, query)}
+                            <i data-lucide="${d.icon}"></i> <span>${highlightMatch(d.name, trimmed)}</span>
                         </a>
                     `).join('')}
                 </div>
             `;
+            suggestions.classList.add('active');
         } else {
             suggestions.innerHTML = `
                 <div class="suggestion-group">
                     <span class="suggestion-label">No results found</span>
-                    <p style="font-size: 0.875rem; color: var(--color-text-muted); padding: 0.5rem 0.75rem;">
-                        Try searching for "Kedarkantha", "Chopta", or "Char Dham"
+                    <p style="font-size: 0.875rem; color: #64748B; padding: 0.5rem 0.85rem; margin: 0;">
+                        Try searching for "Kedarkantha", "Chopta", "Valley of Flowers", or "Kedarnath"
                     </p>
                 </div>
             `;
+            suggestions.classList.add('active');
         }
         
         if (typeof lucide !== 'undefined') lucide.createIcons();
+    };
+
+    input.addEventListener('focus', () => {
+        renderSuggestions(input.value);
+    });
+
+    input.addEventListener('input', (e) => {
+        renderSuggestions(e.target.value);
     });
     
+    const executeSearch = () => {
+        const query = input.value.trim();
+        if (query) {
+            window.location.href = `treks.html?search=${encodeURIComponent(query)}`;
+        }
+    };
+
     // Search button
     if (searchBtn) {
-        searchBtn.addEventListener('click', () => {
-            const query = input.value.trim();
-            if (query) {
-                window.location.href = `treks.html?search=${encodeURIComponent(query)}`;
-            }
-        });
+        searchBtn.addEventListener('click', executeSearch);
     }
     
     // Enter key
     input.addEventListener('keydown', (e) => {
         if (e.key === 'Enter') {
-            const query = input.value.trim();
-            if (query) {
-                window.location.href = `treks.html?search=${encodeURIComponent(query)}`;
-            }
+            executeSearch();
         }
     });
     
     // Close suggestions on click outside
     document.addEventListener('click', (e) => {
-        if (!e.target.closest('.hero-search')) {
+        if (!e.target.closest('.destination-search') && !e.target.closest('.destination-search-container') && !e.target.closest('.hero-search')) {
             suggestions.classList.remove('active');
         }
     });

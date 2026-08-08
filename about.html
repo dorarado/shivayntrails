@@ -3,44 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>About Us | Shivayan Trails — Built in the Himalayas</title>
-    <meta name="description" content="Shivayan Trails was founded in 2020 with a simple belief — travel should stay with you long after you return home. 5,000+ travellers guided across Uttarakhand.">
+    <title>About Us | Mountain Leadership & Pioneers | Shivayan Trails</title>
+    <meta name="description" content="Shivayan Trails was founded in 2020 with a simple belief — travel should stay with you long after you return home. 5,000+ travellers guided across Uttarakhand, Himachal & Ladakh.">
     
     <meta property="og:title" content="About Us | Shivayan Trails">
     <meta property="og:description" content="Built in the Himalayas. Made for journeys that stay with you.">
     <meta property="og:type" content="website">
     
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon-512.png">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/advanced.css">
+    <link rel="stylesheet" href="css/trips-and-pages.css">
 </head>
 <body>
 
-    <!-- SEAMLESS CINEMATIC CURTAIN LOADER -->
-    <div class="page-loader" id="page-loader">
-        <div class="loader-curtain curtain-left"></div>
-        <div class="loader-curtain curtain-right"></div>
-        <div class="loader-inner">
-            <div class="loader-crest">
-                <i data-lucide="mountain-snow"></i>
-            </div>
-            <h2 class="loader-brand">SHIVAYAN TRAILS</h2>
-            <p class="loader-tagline">SACRED HIMALAYAN EXPEDITIONS</p>
-            <div class="loader-progress-track">
-                <div class="loader-progress-bar" id="loader-progress-bar"></div>
-            </div>
-            <div class="loader-status">
-                <span class="loader-percent" id="loader-percent">0%</span>
-            </div>
-        </div>
-    </div>
+    <!-- SCROLL PROGRESS BAR -->
+    <div class="scroll-progress" id="scroll-progress"></div>
 
     <!-- NAVBAR -->
-    <nav class="navbar scrolled" id="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo" id="nav-logo">
                 <div class="logo-icon"><i data-lucide="mountain-snow"></i></div>
@@ -48,12 +36,21 @@
             </a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="treks.html" class="nav-link">Treks</a></li>
+                <li class="nav-dropdown">
+                    <a href="treks.html" class="nav-link">Treks <i data-lucide="chevron-down" class="dropdown-icon"></i></a>
+                    <div class="dropdown-content">
+                        <a href="treks.html?slug=kedarkantha">Kedarkantha Trek</a>
+                        <a href="treks.html?slug=har-ki-dun">Har Ki Dun Trek</a>
+                        <a href="treks.html?slug=valley-of-flowers">Valley of Flowers</a>
+                        <a href="treks.html" class="view-all">View All 19 Treks →</a>
+                    </div>
+                </li>
                 <li><a href="getaways.html" class="nav-link">Getaways</a></li>
                 <li><a href="dham-yatra.html" class="nav-link">Dham Yatra</a></li>
                 <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                 <li><a href="blogs.html" class="nav-link">Blogs</a></li>
                 <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="https://wa.me/919058344407" target="_blank" class="nav-cta">
@@ -66,9 +63,8 @@
         </div>
     </nav>
 
-
     <!-- ABOUT HERO -->
-    <section class="about-hero">
+    <header class="about-hero">
         <div class="about-hero-bg">
             <div class="about-hero-overlay"></div>
         </div>
@@ -78,12 +74,11 @@
                 <i data-lucide="chevron-right"></i>
                 <span>About Us</span>
             </nav>
-            <span class="section-tag">About Us</span>
+            <span class="section-tag">Mountain Stewardship</span>
             <h1>Built in the Himalayas.<br><span class="gradient-text">Made for journeys that stay with you.</span></h1>
             <p>Shivayan Trails was founded in 2020 with a simple belief — travel should stay with you long after you return home.</p>
         </div>
-    </section>
-
+    </header>
 
     <!-- OUR STORY -->
     <section class="our-story">
@@ -104,7 +99,7 @@
                         </div>
                         <div class="story-stat">
                             <span class="story-stat-label">Destinations</span>
-                            <span class="story-stat-value">50+</span>
+                            <span class="story-stat-value">45+</span>
                         </div>
                     </div>
 
@@ -113,241 +108,131 @@
                             <i data-lucide="map-pin"></i>
                             <div>
                                 <strong>Rooted Locally</strong>
-                                <span>Terrain, seasons, communities</span>
+                                <span>Terrain, micro-climates & mountain communities</span>
                             </div>
                         </div>
                         <div class="story-highlight">
                             <i data-lucide="shield-check"></i>
                             <div>
-                                <strong>Safety First</strong>
-                                <span>Planning, leaders, support</span>
+                                <strong>Certified Safety</strong>
+                                <span>Wilderness First Aid (WFR) & mountain emergency protocols</span>
                             </div>
                         </div>
                         <div class="story-highlight">
-                            <i data-lucide="heart-handshake"></i>
+                            <i data-lucide="sparkles"></i>
                             <div>
-                                <strong>Personal Touch</strong>
-                                <span>Small groups, real connections</span>
+                                <strong>Ethical Tourism</strong>
+                                <span>Leave No Trace & local economic empowerment</span>
                             </div>
                         </div>
                     </div>
                 </div>
-                
-                <div class="story-right" data-animate="fade-up" data-delay="200">
-                    <p>We are rooted in the Himalayas, and everything we design comes from a deep respect for the mountains, the people, and the pace of life they teach you.</p>
-                    
-                    <p>What started as a passion for meaningful exploration has grown into a trusted name for treks, yatras, cultural journeys, and curated group experiences across Uttarakhand and the greater Himalayan region.</p>
-                    
-                    <p>From adventure trails like Kedarkantha and Rupin Pass to spiritual journeys such as Char Dham and Valley of Flowers, every itinerary is carefully planned with safety, comfort, and authenticity at its core.</p>
-                    
-                    <p>Since inception, we have guided 5,000+ travellers. Students, corporate teams, solo explorers, and families have trusted us to create experiences that are structured yet personal. Our local guides, trek leaders, and on-ground support teams ensure that every journey runs smoothly while still feeling flexible and human.</p>
-                    
-                    <p>We also collaborate with institutions and organisations to design exploration programs that combine learning with adventure. From university batches to corporate off-sites, we create mountain experiences that build connection and clarity.</p>
-                    
-                    <blockquote class="story-quote">
-                        <p>"We are not here to sell trips. We are here to create journeys that ground you, challenge you, and stay with you."</p>
-                    </blockquote>
+
+                <div class="story-right" data-animate="fade-up" data-delay="150">
+                    <div class="story-prose">
+                        <p class="story-lead">
+                            Shivayan Trails started not in a corporate boardroom, but around high-altitude campfires and along steep ridge trails in the Garhwal Himalayas.
+                        </p>
+                        <p>
+                            We saw travel becoming transactional — crowded buses, hurried itineraries, and travellers returning exhausted rather than refreshed. We wanted to build something different: journeys where you breathe deeper, walk slower, and form genuine connections with the mountains and each other.
+                        </p>
+                        <p>
+                            From sacred Jyotirlinga pilgrimages like Kedarnath to snow-covered summit ascents like Kedarkantha and Bali Pass, every route is vetted by our own founders before we take our first traveller batch.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- TIMELINE -->
-    <section class="timeline-section">
+    <!-- MILESTONES -->
+    <section class="milestones-section">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
-                <span class="section-tag">Our Journey</span>
+                <span class="section-tag">Milestones</span>
                 <h2 class="section-title">Milestones Along <span class="highlight">The Trail</span></h2>
+                <p class="section-subtitle">A journey of dedication, local trust, and thousands of transformed travellers.</p>
             </div>
-            
-            <div class="timeline">
-                <div class="timeline-line"></div>
-                
-                <div class="timeline-item" data-animate="fade-up">
-                    <div class="timeline-dot">
-                        <i data-lucide="flag"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2020</span>
-                        <h3>The Beginning</h3>
-                        <p>Shivayan Trails was founded by Mayank Biswas and co-founded by Saksham Sharma. Two travellers with a shared dream — to make Himalayan adventures accessible and authentic.</p>
-                    </div>
+
+            <div class="milestones-timeline">
+                <div class="milestone-card" data-animate="fade-up">
+                    <span class="milestone-year">2020</span>
+                    <h3>The Seed is Sown</h3>
+                    <p>Founded with a focus on local treks in Uttarakhand. First successful batch guided to Kedarkantha Summit.</p>
                 </div>
-                
-                <div class="timeline-item" data-animate="fade-up" data-delay="100">
-                    <div class="timeline-dot">
-                        <i data-lucide="users"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2021</span>
-                        <h3>First 500 Travellers</h3>
-                        <p>Despite challenging times, we guided our first 500 travellers across Kedarkantha, Chopta, and Har Ki Dun. Word of mouth became our strongest marketing channel.</p>
-                    </div>
+                <div class="milestone-card" data-animate="fade-up" data-delay="100">
+                    <span class="milestone-year">2022</span>
+                    <h3>Expanding Horizons</h3>
+                    <p>Expanded into high-altitude getaways across Himachal, Spiti Valley, and sacred Char Dham pilgrimage circuits.</p>
                 </div>
-                
-                <div class="timeline-item" data-animate="fade-up" data-delay="200">
-                    <div class="timeline-dot">
-                        <i data-lucide="building-2"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2022</span>
-                        <h3>Institutional Partnerships</h3>
-                        <p>Started collaborating with universities and corporate organisations. Designed custom adventure programs for college batches and team-building retreats.</p>
-                    </div>
+                <div class="milestone-card" data-animate="fade-up" data-delay="200">
+                    <span class="milestone-year">2024</span>
+                    <h3>5,000+ Travellers Milestone</h3>
+                    <p>Celebrated over 5,000 satisfied explorers with a 98% summit success rate and zero safety incidents.</p>
                 </div>
-                
-                <div class="timeline-item" data-animate="fade-up" data-delay="300">
-                    <div class="timeline-dot">
-                        <i data-lucide="route"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2023</span>
-                        <h3>Expanded to Dham Yatras</h3>
-                        <p>Launched Char Dham, Kedarnath, and Badrinath Yatra packages. Brought the same attention to safety and authenticity to spiritual journeys.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item" data-animate="fade-up" data-delay="400">
-                    <div class="timeline-dot">
-                        <i data-lucide="trophy"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2024</span>
-                        <h3>5,000+ Travellers Milestone</h3>
-                        <p>Crossed 5,000 happy travellers. Expanded our portfolio to 50+ curated experiences and earned 4.8/5 average rating across platforms.</p>
-                    </div>
-                </div>
-                
-                <div class="timeline-item" data-animate="fade-up" data-delay="500">
-                    <div class="timeline-dot active">
-                        <i data-lucide="rocket"></i>
-                    </div>
-                    <div class="timeline-content">
-                        <span class="timeline-year">2025-26</span>
-                        <h3>What's Next</h3>
-                        <p>Expanding to Himachal Pradesh and Ladakh. Launching premium small-group experiences and a mobile app for seamless trip planning.</p>
-                    </div>
+                <div class="milestone-card" data-animate="fade-up" data-delay="300">
+                    <span class="milestone-year">2026</span>
+                    <h3>Aero & High-Pass Frontier</h3>
+                    <p>Ranked Top 10 paragliding operations, remote border expeditions (Darma Valley, Adi Kailash), and digital booking excellence.</p>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- WHY CHOOSE US (About Page Version) -->
-    <section class="about-features">
+    <!-- TEAM SHOWCASE (9 PROFILES) -->
+    <section class="team-section" style="padding: var(--space-12) 0;">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
-                <span class="section-tag">Why Choose Us</span>
-                <h2 class="section-title">What Sets Us <span class="highlight">Apart</span></h2>
-                <p class="section-subtitle">Built by travellers for travellers — on trust, strong execution, and a genuine love for the Himalayas.</p>
-            </div>
-            
-            <div class="about-features-grid">
-                <div class="about-feature-card" data-animate="fade-up">
-                    <div class="about-feature-number">01</div>
-                    <div class="about-feature-icon"><i data-lucide="mountain"></i></div>
-                    <h3>Deep Himalayan Roots</h3>
-                    <p>We operate where we belong. Our understanding of terrain, seasons, routes, and local communities allows us to create experiences that are safe and thoughtfully designed.</p>
-                </div>
-                
-                <div class="about-feature-card" data-animate="fade-up" data-delay="100">
-                    <div class="about-feature-number">02</div>
-                    <div class="about-feature-icon"><i data-lucide="shield-check"></i></div>
-                    <h3>Safety Without Compromise</h3>
-                    <p>Trained trek leaders, experienced captains, structured planning, and on-ground support teams ensure your journey is secure from start to finish.</p>
-                </div>
-                
-                <div class="about-feature-card" data-animate="fade-up" data-delay="200">
-                    <div class="about-feature-number">03</div>
-                    <div class="about-feature-icon"><i data-lucide="compass"></i></div>
-                    <h3>Thoughtfully Curated Itineraries</h3>
-                    <p>No rushed sightseeing. No unnecessary detours. Each itinerary balances adventure, rest, exploration, and connection.</p>
-                </div>
-                
-                <div class="about-feature-card" data-animate="fade-up" data-delay="300">
-                    <div class="about-feature-number">04</div>
-                    <div class="about-feature-icon"><i data-lucide="headphones"></i></div>
-                    <h3>24/7 Support</h3>
-                    <p>From your first inquiry to your return home, our team is available to guide you. Planning assistance, travel coordination, and in-journey support.</p>
-                </div>
-                
-                <div class="about-feature-card" data-animate="fade-up" data-delay="400">
-                    <div class="about-feature-number">05</div>
-                    <div class="about-feature-icon"><i data-lucide="star"></i></div>
-                    <h3>Trusted by 5,000+ Travellers</h3>
-                    <p>Our community has grown through word of mouth and repeat travellers. Consistent on-ground execution and genuine service built long-term trust.</p>
-                </div>
-                
-                <div class="about-feature-card" data-animate="fade-up" data-delay="500">
-                    <div class="about-feature-number">06</div>
-                    <div class="about-feature-icon"><i data-lucide="users"></i></div>
-                    <h3>Structured Group Experiences</h3>
-                    <p>We specialise in college programs, institutional batches, and corporate retreats — organised, well-managed, and designed for shared growth.</p>
-                </div>
-                
-                <div class="about-feature-card about-feature-card--highlight" data-animate="fade-up" data-delay="600">
-                    <div class="about-feature-number">07</div>
-                    <div class="about-feature-icon"><i data-lucide="heart"></i></div>
-                    <h3>Real Experiences, Not Packages</h3>
-                    <p>We focus on meaningful travel. Whether it's a spiritual yatra, a high-altitude trek, or a cultural immersion — it feels authentic and personal.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- TEAM -->
-    <section class="team-section">
-        <div class="container">
-            <div class="section-header" data-animate="fade-up">
-                <span class="section-tag">Our Team</span>
+                <span class="section-tag">Mountain Leadership</span>
                 <h2 class="section-title">The People Behind <span class="highlight">The Journey</span></h2>
-                <p class="section-subtitle">Behind every successful journey is a team that plans, guides, manages, and supports it with care.</p>
+                <p class="section-subtitle">Behind every successful summit is a dedicated team that plans, guides, manages, and supports it with care.</p>
             </div>
             
-            <div class="team-grid">
+            <div class="team-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--space-6);">
                 <div class="team-card" data-animate="fade-up">
-                    <div class="team-avatar">
-                        <i data-lucide="user"></i>
-                    </div>
-                    <h3>Mayank Biswas</h3>
-                    <span class="team-role">Founder & CEO</span>
-                    <p>A lifelong mountain enthusiast who turned his passion for Himalayan exploration into Shivayan Trails. Leads operations and expedition planning.</p>
-                    <div class="team-social">
-                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-                        <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-                    </div>
+                    <div class="team-avatar" style="background: rgba(218,186,111,0.15); color: var(--color-gold); font-weight: 800; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; border: 2px solid var(--color-gold); margin-bottom: 14px;">MB</div>
+                    <h3 style="font-family: 'Cinzel', serif; font-size: 1.2rem; color: #fff;">Mayank Biswas</h3>
+                    <span class="team-role" style="color: var(--color-gold); font-size: 12px; font-weight: 700; text-transform: uppercase;">Founder & Expedition Director</span>
+                    <p style="font-size: 13px; line-height: 1.6; color: rgba(242,240,235,0.75); margin-top: 8px;">Mayank founded Shivayan Trails to deliver deeply rooted, safe, and transformative Himalayan journeys. From scouting remote alpine trails to setting stringent safety standards, he ensures authentic mountain stewardship.</p>
                 </div>
                 
                 <div class="team-card" data-animate="fade-up" data-delay="100">
-                    <div class="team-avatar">
-                        <i data-lucide="user"></i>
-                    </div>
-                    <h3>Saksham Sharma</h3>
-                    <span class="team-role">Co-Founder & Head of Experiences</span>
-                    <p>Curates every itinerary with an eye for authenticity and comfort. Ensures each experience balances adventure with meaningful connection.</p>
-                    <div class="team-social">
-                        <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
-                        <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-                    </div>
+                    <div class="team-avatar" style="background: rgba(218,186,111,0.15); color: var(--color-gold); font-weight: 800; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; border: 2px solid var(--color-gold); margin-bottom: 14px;">SS</div>
+                    <h3 style="font-family: 'Cinzel', serif; font-size: 1.2rem; color: #fff;">Saksham Sharma</h3>
+                    <span class="team-role" style="color: var(--color-gold); font-size: 12px; font-weight: 700; text-transform: uppercase;">Co-Founder & Head of Operations</span>
+                    <p style="font-size: 13px; line-height: 1.6; color: rgba(242,240,235,0.75); margin-top: 8px;">Saksham shapes operational precision across Himachal and Uttarakhand. He coordinates seamless logistics, emergency backup networks, and trusted mountain community partnerships.</p>
                 </div>
                 
                 <div class="team-card" data-animate="fade-up" data-delay="200">
-                    <div class="team-avatar team-avatar--group">
-                        <i data-lucide="users"></i>
-                    </div>
-                    <h3>Our Trek Leaders</h3>
-                    <span class="team-role">Certified Local Guides</span>
-                    <p>A team of trained, local trek leaders who know every trail, every weather pattern, and every safe campsite across Uttarakhand.</p>
-                    <div class="team-social">
-                        <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
-                    </div>
+                    <div class="team-avatar" style="background: rgba(218,186,111,0.15); color: var(--color-gold); font-weight: 800; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; border: 2px solid var(--color-gold); margin-bottom: 14px;">SK</div>
+                    <h3 style="font-family: 'Cinzel', serif; font-size: 1.2rem; color: #fff;">Shreya Kothiyal</h3>
+                    <span class="team-role" style="color: var(--color-gold); font-size: 12px; font-weight: 700; text-transform: uppercase;">Head of Brand & Storytelling</span>
+                    <p style="font-size: 13px; line-height: 1.6; color: rgba(242,240,235,0.75); margin-top: 8px;">Shreya directs brand communication and community engagement, telling real mountain stories that celebrate local Himalayan culture and environmental consciousness.</p>
+                </div>
+
+                <div class="team-card" data-animate="fade-up" data-delay="100">
+                    <div class="team-avatar" style="background: rgba(218,186,111,0.15); color: var(--color-gold); font-weight: 800; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; border: 2px solid var(--color-gold); margin-bottom: 14px;">MA</div>
+                    <h3 style="font-family: 'Cinzel', serif; font-size: 1.2rem; color: #fff;">Musharaf Ali Khan</h3>
+                    <span class="team-role" style="color: var(--color-gold); font-size: 12px; font-weight: 700; text-transform: uppercase;">Lead Paragliding Pilot (Top 10 India)</span>
+                    <p style="font-size: 13px; line-height: 1.6; color: rgba(242,240,235,0.75); margin-top: 8px;">Ranked among the Top 10 paragliding pilots in India with thousands of air hours across the Himalayas. He oversees aero-adventure safety and flight control in Bir Billing.</p>
+                </div>
+
+                <div class="team-card" data-animate="fade-up" data-delay="200">
+                    <div class="team-avatar" style="background: rgba(218,186,111,0.15); color: var(--color-gold); font-weight: 800; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; border: 2px solid var(--color-gold); margin-bottom: 14px;">VD</div>
+                    <h3 style="font-family: 'Cinzel', serif; font-size: 1.2rem; color: #fff;">Vidit Dobhal</h3>
+                    <span class="team-role" style="color: var(--color-gold); font-size: 12px; font-weight: 700; text-transform: uppercase;">Senior High-Altitude Trek Leader</span>
+                    <p style="font-size: 13px; line-height: 1.6; color: rgba(242,240,235,0.75); margin-top: 8px;">Specialises in technical passes (Bali Pass, Rupin Pass, Kedartal). His calm leadership in mountain weather makes him a dependable presence on high trails.</p>
+                </div>
+
+                <div class="team-card" data-animate="fade-up" data-delay="300">
+                    <div class="team-avatar" style="background: rgba(218,186,111,0.15); color: var(--color-gold); font-weight: 800; font-size: 1.3rem; display: flex; align-items: center; justify-content: center; width: 64px; height: 64px; border-radius: 50%; border: 2px solid var(--color-gold); margin-bottom: 14px;">HC</div>
+                    <h3 style="font-family: 'Cinzel', serif; font-size: 1.2rem; color: #fff;">Hemant Chauhan</h3>
+                    <span class="team-role" style="color: var(--color-gold); font-size: 12px; font-weight: 700; text-transform: uppercase;">Field Operations & Gear Lead</span>
+                    <p style="font-size: 13px; line-height: 1.6; color: rgba(242,240,235,0.75); margin-top: 8px;">Manages high-altitude base camps, technical gear audits, and kitchen logistics to ensure hot nutritious food and uncompromised safety gear on every trek.</p>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- CTA -->
     <section class="cta-section" id="cta">
@@ -355,7 +240,7 @@
         <div class="container">
             <div class="cta-content" data-animate="fade-up">
                 <h2>Ready to Start Your <span class="gradient-text">Journey</span>?</h2>
-                <p>Join 5,000+ travellers who've experienced the Himalayas with us.</p>
+                <p>Join 5,000+ travellers who've experienced the sacred Himalayas with us.</p>
                 <div class="cta-buttons">
                     <a href="https://wa.me/919058344407" target="_blank" class="btn btn-whatsapp">
                         <i data-lucide="message-circle"></i> Chat on WhatsApp
@@ -368,7 +253,6 @@
         </div>
     </section>
 
-
     <!-- FOOTER -->
     <footer class="footer" id="footer">
         <div class="container">
@@ -380,10 +264,9 @@
                     </a>
                     <p>Curated Himalayan experiences — treks, getaways, and sacred journeys crafted with care.</p>
                     <div class="footer-social">
-                        <a href="#" aria-label="Instagram" class="social-link"><i data-lucide="instagram"></i></a>
-                        <a href="#" aria-label="Facebook" class="social-link"><i data-lucide="facebook"></i></a>
-                        <a href="#" aria-label="YouTube" class="social-link"><i data-lucide="youtube"></i></a>
-                        <a href="#" aria-label="LinkedIn" class="social-link"><i data-lucide="linkedin"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-link"><i data-lucide="instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="social-link"><i data-lucide="facebook"></i></a>
+                        <a href="https://wa.me/919058344407" target="_blank" aria-label="WhatsApp" class="social-link"><i data-lucide="message-circle"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -407,17 +290,8 @@
                     <h4>Legal</h4>
                     <ul>
                         <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="refund.html">Cancellation Policy</a></li>
+                        <li><a href="terms.html#health">Health Guidelines</a></li>
                     </ul>
-                </div>
-                <div class="footer-newsletter">
-                    <h4>Stay Updated</h4>
-                    <p>Get trek updates, offers & travel inspiration.</p>
-                    <form class="newsletter-form" id="newsletter-form">
-                        <input type="email" placeholder="Your email address" required>
-                        <button type="submit"><i data-lucide="send"></i></button>
-                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -433,7 +307,9 @@
         <span class="whatsapp-tooltip">Chat with us!</span>
     </a>
 
+    <script src="js/trips-data.js"></script>
     <script src="js/main.js"></script>
     <script src="js/advanced.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

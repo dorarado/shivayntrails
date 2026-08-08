@@ -15,7 +15,8 @@
 .about-hero-bg {
     position: absolute;
     inset: 0;
-    background: url('https://images.unsplash.com/photo-1454496522488-7a8e488e8606?w=1920&q=85') center/cover no-repeat;
+    background: url('../assets/images/himalaya-hero-bg.jpg') center 18% / cover no-repeat;
+    filter: brightness(1.18) contrast(1.04);
 }
 
 .about-hero-overlay {
@@ -23,9 +24,9 @@
     inset: 0;
     background: linear-gradient(
         180deg,
-        rgba(10, 15, 13, 0.7) 0%,
-        rgba(27, 67, 50, 0.6) 50%,
-        rgba(10, 15, 13, 0.85) 100%
+        rgba(10, 15, 13, 0.52) 0%,
+        rgba(27, 67, 50, 0.42) 50%,
+        rgba(10, 15, 13, 0.75) 100%
     );
 }
 

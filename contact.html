@@ -3,40 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Contact Us | Shivayan Trails — Plan Your Himalayan Adventure</title>
-    <meta name="description" content="Get in touch with Shivayan Trails to plan your perfect Himalayan trek, getaway, or Dham Yatra. 24/7 support. Call, email, or WhatsApp us today.">
+    <title>Contact Us | Speak With Mountain Pioneers | Shivayan Trails</title>
+    <meta name="description" content="Connect directly with Shivayan Trails mountain pioneers. Plan custom treks, Char Dham Yatras, group adventures, or get immediate answers on WhatsApp.">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon-512.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/advanced.css">
+    <link rel="stylesheet" href="css/trips-and-pages.css">
 </head>
 <body>
 
-    <!-- SEAMLESS CINEMATIC CURTAIN LOADER -->
-    <div class="page-loader" id="page-loader">
-        <div class="loader-curtain curtain-left"></div>
-        <div class="loader-curtain curtain-right"></div>
-        <div class="loader-inner">
-            <div class="loader-crest">
-                <i data-lucide="mountain-snow"></i>
-            </div>
-            <h2 class="loader-brand">SHIVAYAN TRAILS</h2>
-            <p class="loader-tagline">SACRED HIMALAYAN EXPEDITIONS</p>
-            <div class="loader-progress-track">
-                <div class="loader-progress-bar" id="loader-progress-bar"></div>
-            </div>
-            <div class="loader-status">
-                <span class="loader-percent" id="loader-percent">0%</span>
-            </div>
-        </div>
-    </div>
+    <!-- SCROLL PROGRESS BAR -->
+    <div class="scroll-progress" id="scroll-progress"></div>
 
     <!-- NAVBAR -->
-    <nav class="navbar scrolled" id="navbar">
+    <nav class="navbar" id="navbar">
         <div class="nav-container">
             <a href="index.html" class="nav-logo" id="nav-logo">
                 <div class="logo-icon"><i data-lucide="mountain-snow"></i></div>
@@ -44,12 +32,21 @@
             </a>
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link">Home</a></li>
-                <li><a href="treks.html" class="nav-link">Treks</a></li>
+                <li class="nav-dropdown">
+                    <a href="treks.html" class="nav-link">Treks <i data-lucide="chevron-down" class="dropdown-icon"></i></a>
+                    <div class="dropdown-content">
+                        <a href="treks.html?slug=kedarkantha">Kedarkantha Trek</a>
+                        <a href="treks.html?slug=har-ki-dun">Har Ki Dun Trek</a>
+                        <a href="treks.html?slug=valley-of-flowers">Valley of Flowers</a>
+                        <a href="treks.html" class="view-all">View All 19 Treks →</a>
+                    </div>
+                </li>
                 <li><a href="getaways.html" class="nav-link">Getaways</a></li>
                 <li><a href="dham-yatra.html" class="nav-link">Dham Yatra</a></li>
                 <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                 <li><a href="blogs.html" class="nav-link">Blogs</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link active">Contact</a></li>
             </ul>
             <div class="nav-actions">
                 <a href="https://wa.me/919058344407" target="_blank" class="nav-cta">
@@ -62,9 +59,8 @@
         </div>
     </nav>
 
-
     <!-- CONTACT HERO -->
-    <section class="contact-hero">
+    <header class="contact-hero">
         <div class="contact-hero-bg">
             <div class="contact-hero-overlay"></div>
         </div>
@@ -74,191 +70,115 @@
                 <i data-lucide="chevron-right"></i>
                 <span>Contact</span>
             </nav>
-            <span class="section-tag">Get In Touch</span>
+            <span class="section-tag">Direct Mountain Assistance</span>
             <h1>Let's Plan Your Next<br><span class="gradient-text">Himalayan Adventure</span></h1>
-            <p>Have questions? Ready to book? Our team responds within 2 hours.</p>
+            <p>Have questions on altitude, customized batch dates, or yatra registrations? Our team responds within 2 hours.</p>
         </div>
-    </section>
+    </header>
 
-
-    <!-- CONTACT INFO CARDS -->
+    <!-- CONTACT CARDS -->
     <section class="contact-info-section">
         <div class="container">
             <div class="contact-cards">
                 <a href="tel:+919058344407" class="contact-info-card" data-animate="fade-up">
-                    <div class="contact-card-icon">
-                        <i data-lucide="phone"></i>
-                    </div>
-                    <h3>Call Us</h3>
+                    <div class="contact-card-icon"><i data-lucide="phone"></i></div>
+                    <h3>Call Us Directly</h3>
                     <p class="contact-value">+91-9058344407</p>
-                    <span class="contact-note">Available 9 AM – 9 PM IST</span>
+                    <span class="contact-note">Available 8 AM – 10 PM IST Daily</span>
                 </a>
                 
                 <a href="mailto:shivayantrails@gmail.com" class="contact-info-card" data-animate="fade-up" data-delay="100">
-                    <div class="contact-card-icon">
-                        <i data-lucide="mail"></i>
-                    </div>
-                    <h3>Email Us</h3>
+                    <div class="contact-card-icon"><i data-lucide="mail"></i></div>
+                    <h3>Email Support</h3>
                     <p class="contact-value">shivayantrails@gmail.com</p>
-                    <span class="contact-note">We reply within 2 hours</span>
+                    <span class="contact-note">Custom Itineraries & Corporate Squads</span>
                 </a>
                 
-                <a href="https://wa.me/919058344407" target="_blank" class="contact-info-card contact-info-card--whatsapp" data-animate="fade-up" data-delay="200">
-                    <div class="contact-card-icon">
-                        <i data-lucide="message-circle"></i>
-                    </div>
-                    <h3>WhatsApp</h3>
-                    <p class="contact-value">Chat with us instantly</p>
-                    <span class="contact-note">Quick replies, 24/7</span>
+                <a href="https://wa.me/919058344407" target="_blank" class="contact-info-card" data-animate="fade-up" data-delay="200">
+                    <div class="contact-card-icon"><i data-lucide="message-circle"></i></div>
+                    <h3>Instant WhatsApp</h3>
+                    <p class="contact-value">+91-9058344407</p>
+                    <span class="contact-note">Fastest Response (Avg 5 mins)</span>
                 </a>
-                
-                <div class="contact-info-card" data-animate="fade-up" data-delay="300">
-                    <div class="contact-card-icon">
-                        <i data-lucide="map-pin"></i>
-                    </div>
-                    <h3>Office</h3>
-                    <p class="contact-value">Dehradun, Uttarakhand</p>
-                    <span class="contact-note">India — 248001</span>
-                </div>
             </div>
         </div>
     </section>
 
-
-    <!-- CONTACT FORM + MAP -->
+    <!-- MAIN CONTACT FORM & BASE LOCATIONS -->
     <section class="contact-main">
         <div class="container">
             <div class="contact-grid">
-                <!-- Form -->
                 <div class="contact-form-wrapper" data-animate="fade-up">
                     <h2>Send Us a Message</h2>
-                    <p>Tell us about your dream trip and we'll craft the perfect itinerary.</p>
-                    
-                    <form class="contact-form" id="contact-form">
+                    <p class="form-subtitle">Fill in your requirements and our certified trek leaders will tailor the perfect plan for you.</p>
+
+                    <form class="contact-form" onsubmit="handleDirectContactForm(event)">
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="contact-name">Full Name *</label>
-                                <input type="text" id="contact-name" placeholder="Your full name" required>
+                                <label for="contact-name">Your Full Name *</label>
+                                <input type="text" id="contact-name" name="name" placeholder="e.g. Ananya Roy" required>
                             </div>
                             <div class="form-group">
-                                <label for="contact-phone">Phone Number *</label>
-                                <input type="tel" id="contact-phone" placeholder="+91-XXXXXXXXXX" required>
+                                <label for="contact-phone">Phone / WhatsApp *</label>
+                                <input type="tel" id="contact-phone" name="phone" placeholder="+91 98765 43210" required>
                             </div>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="contact-email">Email Address *</label>
-                            <input type="email" id="contact-email" placeholder="your@email.com" required>
-                        </div>
-                        
+
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="contact-interest">Interested In</label>
-                                <select id="contact-interest">
-                                    <option value="" disabled selected>Choose a category</option>
-                                    <option value="trek">Treks</option>
-                                    <option value="getaway">Getaways</option>
-                                    <option value="dham-yatra">Dham Yatra</option>
-                                    <option value="custom">Custom Trip</option>
-                                    <option value="group">Group / Corporate</option>
-                                    <option value="other">Other</option>
-                                </select>
+                                <label for="contact-email">Email Address</label>
+                                <input type="email" id="contact-email" name="email" placeholder="you@example.com">
                             </div>
                             <div class="form-group">
-                                <label for="contact-group-size">Group Size</label>
-                                <select id="contact-group-size">
-                                    <option value="" disabled selected>How many people?</option>
-                                    <option value="solo">Solo (1)</option>
-                                    <option value="couple">Couple (2)</option>
-                                    <option value="small">Small Group (3-6)</option>
-                                    <option value="medium">Medium Group (7-15)</option>
-                                    <option value="large">Large Group (16+)</option>
+                                <label for="contact-trip">Interested Expedition</label>
+                                <select id="contact-trip" name="trip" style="background: rgba(6,12,16,0.8); color: #fff; border: 1px solid rgba(218,186,111,0.3); border-radius: var(--radius-md); padding: 12px;">
+                                    <option value="Kedarkantha Trek">Kedarkantha Snow Trek</option>
+                                    <option value="Har Ki Dun Trek">Har Ki Dun Valley Trek</option>
+                                    <option value="Valley of Flowers">Valley of Flowers & Hemkund</option>
+                                    <option value="Kedarnath Dham">Kedarnath Dham Yatra</option>
+                                    <option value="Char Dham Yatra">Complete Char Dham Yatra</option>
+                                    <option value="Auli Ski Resort">Auli Ski & Meadows</option>
+                                    <option value="Spiti Valley">Spiti & Kinnaur Circuit</option>
+                                    <option value="Jibhi & Tirthan">Jibhi Riverside Retreat</option>
+                                    <option value="Custom Himalayan Plan">Custom / Corporate Group</option>
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
-                            <label for="contact-dates">Preferred Travel Dates</label>
-                            <input type="text" id="contact-dates" placeholder="e.g., September 15-20, 2026 (flexible)">
+                            <label for="contact-message">Your Message or Dates</label>
+                            <textarea id="contact-message" name="message" rows="4" placeholder="Tell us about your group size, preferred dates, or fitness levels..."></textarea>
                         </div>
-                        
-                        <div class="form-group">
-                            <label for="contact-message">Your Message *</label>
-                            <textarea id="contact-message" rows="4" placeholder="Tell us about your ideal trip — destinations, preferences, budget, any special requirements..." required></textarea>
-                        </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-full" id="contact-submit">
-                            <i data-lucide="send"></i> Send Message
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message via WhatsApp</span>
+                            <i data-lucide="send"></i>
                         </button>
-                        
-                        <p class="form-disclaimer">
-                            <i data-lucide="shield-check"></i>
-                            Your information is secure. We'll respond within 2 hours during business hours.
-                        </p>
                     </form>
                 </div>
-                
-                <!-- Map & Extras -->
-                <div class="contact-sidebar" data-animate="fade-up" data-delay="200">
-                    <div class="map-wrapper">
-                        <iframe 
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d220848.67890273916!2d77.86800707036688!3d30.316495472429367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390929c356c888af%3A0x4c3562c032518799!2sDehradun%2C%20Uttarakhand!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
-                            width="100%" 
-                            height="300" 
-                            style="border:0; border-radius: var(--radius-xl);" 
-                            allowfullscreen="" 
-                            loading="lazy" 
-                            referrerpolicy="no-referrer-when-downgrade"
-                            title="Shivayan Trails office location"
-                        ></iframe>
-                    </div>
+
+                <div class="contact-map-wrapper" data-animate="fade-up" data-delay="150">
+                    <h2>Our Mountain Hubs</h2>
+                    <p class="map-subtitle">Ground hubs & operational base camps across Uttarakhand.</p>
                     
-                    <div class="contact-faq">
-                        <h3>Frequently Asked Questions</h3>
-                        
-                        <details class="faq-item">
-                            <summary>How do I book a trek?</summary>
-                            <p>You can book by sending us a WhatsApp message, filling out this form, or calling us directly. We'll confirm availability and guide you through the process.</p>
-                        </details>
-                        
-                        <details class="faq-item">
-                            <summary>What's included in the package price?</summary>
-                            <p>Most packages include accommodation, meals, guide fees, permits, and transportation from the base camp. Specific inclusions vary by package — check individual pages for details.</p>
-                        </details>
-                        
-                        <details class="faq-item">
-                            <summary>Can I customize a trip?</summary>
-                            <p>Absolutely! We specialize in custom trips for families, groups, and corporate teams. Tell us your preferences and we'll design the perfect itinerary.</p>
-                        </details>
-                        
-                        <details class="faq-item">
-                            <summary>What's the cancellation policy?</summary>
-                            <p>We offer flexible cancellation. Full refund if cancelled 15+ days before departure, 50% refund for 7-14 days, and case-by-case for shorter notice.</p>
-                        </details>
-                    </div>
-                    
-                    <div class="contact-social-strip">
-                        <h3>Follow Our Adventures</h3>
-                        <div class="social-links-row">
-                            <a href="#" class="social-link-large" aria-label="Instagram">
-                                <i data-lucide="instagram"></i>
-                                <span>Instagram</span>
-                            </a>
-                            <a href="#" class="social-link-large" aria-label="Facebook">
-                                <i data-lucide="facebook"></i>
-                                <span>Facebook</span>
-                            </a>
-                            <a href="#" class="social-link-large" aria-label="YouTube">
-                                <i data-lucide="youtube"></i>
-                                <span>YouTube</span>
-                            </a>
+                    <div style="display: flex; flex-direction: column; gap: 16px; margin-top: 20px;">
+                        <div style="padding: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(218,186,111,0.25); border-radius: var(--radius-md);">
+                            <h4 style="font-family: 'Cinzel', serif; color: var(--color-gold); margin-bottom: 6px;">1. Dehradun Coordination Base</h4>
+                            <p style="font-size: 13px; color: rgba(242,240,235,0.85); line-height: 1.6;">Main logistics, trek briefing & pickup hub for Sankri, Kedarkantha, Har Ki Dun & Dayara Bugyal routes.</p>
+                        </div>
+                        <div style="padding: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(218,186,111,0.25); border-radius: var(--radius-md);">
+                            <h4 style="font-family: 'Cinzel', serif; color: var(--color-gold); margin-bottom: 6px;">2. Rishikesh Adventure & Yatra Base</h4>
+                            <p style="font-size: 13px; color: rgba(242,240,235,0.85); line-height: 1.6;">Pilgrimage launchpad for Kedarnath, Badrinath, Chopta-Tungnath, Valley of Flowers, and Ganga rafting.</p>
+                        </div>
+                        <div style="padding: 18px; background: rgba(255,255,255,0.03); border: 1px solid rgba(218,186,111,0.25); border-radius: var(--radius-md);">
+                            <h4 style="font-family: 'Cinzel', serif; color: var(--color-gold); margin-bottom: 6px;">3. Sankri & Joshimath High Camps</h4>
+                            <p style="font-size: 13px; color: rgba(242,240,235,0.85); line-height: 1.6;">Dedicated mountain crew, alpine equipment caches, emergency oxygen, and certified guides.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- FOOTER -->
     <footer class="footer" id="footer">
@@ -271,10 +191,9 @@
                     </a>
                     <p>Curated Himalayan experiences — treks, getaways, and sacred journeys crafted with care.</p>
                     <div class="footer-social">
-                        <a href="#" aria-label="Instagram" class="social-link"><i data-lucide="instagram"></i></a>
-                        <a href="#" aria-label="Facebook" class="social-link"><i data-lucide="facebook"></i></a>
-                        <a href="#" aria-label="YouTube" class="social-link"><i data-lucide="youtube"></i></a>
-                        <a href="#" aria-label="LinkedIn" class="social-link"><i data-lucide="linkedin"></i></a>
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram" class="social-link"><i data-lucide="instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook" class="social-link"><i data-lucide="facebook"></i></a>
+                        <a href="https://wa.me/919058344407" target="_blank" aria-label="WhatsApp" class="social-link"><i data-lucide="message-circle"></i></a>
                     </div>
                 </div>
                 <div class="footer-links">
@@ -298,17 +217,8 @@
                     <h4>Legal</h4>
                     <ul>
                         <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="refund.html">Cancellation Policy</a></li>
+                        <li><a href="terms.html#health">Health Guidelines</a></li>
                     </ul>
-                </div>
-                <div class="footer-newsletter">
-                    <h4>Stay Updated</h4>
-                    <p>Get trek updates, offers & travel inspiration.</p>
-                    <form class="newsletter-form" id="newsletter-form">
-                        <input type="email" placeholder="Your email address" required>
-                        <button type="submit"><i data-lucide="send"></i></button>
-                    </form>
                 </div>
             </div>
             <div class="footer-bottom">
@@ -324,33 +234,22 @@
         <span class="whatsapp-tooltip">Chat with us!</span>
     </a>
 
-    <script src="js/main.js"></script>
-    <script>
-        // Contact form handling
-        const contactForm = document.getElementById('contact-form');
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const btn = document.getElementById('contact-submit');
-                const original = btn.innerHTML;
-                
-                btn.innerHTML = '<i data-lucide="check-circle"></i> Message Sent!';
-                btn.style.background = '#25D366';
-                btn.disabled = true;
-                
-                if (typeof lucide !== 'undefined') lucide.createIcons();
-                
-                setTimeout(() => {
-                    btn.innerHTML = original;
-                    btn.style.background = '';
-                    btn.disabled = false;
-                    contactForm.reset();
-                    if (typeof lucide !== 'undefined') lucide.createIcons();
-                }, 3000);
-            });
-        }
-    </script>
+    <script src="js/trips-data.js"></script>
     <script src="js/main.js"></script>
     <script src="js/advanced.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        function handleDirectContactForm(e) {
+            e.preventDefault();
+            const name = document.getElementById('contact-name').value;
+            const phone = document.getElementById('contact-phone').value;
+            const email = document.getElementById('contact-email').value;
+            const trip = document.getElementById('contact-trip').value;
+            const msg = document.getElementById('contact-message').value;
+
+            const text = `Hi Shivayan Trails! 🙏\nNew Enquiry from Website:\n👤 Name: ${name}\n📱 Phone: ${phone}\n✉️ Email: ${email || 'N/A'}\n🏔️ Interested Trip: ${trip}\n💬 Message: ${msg || 'Looking for available dates and itinerary'}`;
+            window.open(`https://wa.me/919058344407?text=${encodeURIComponent(text)}`, '_blank');
+        }
+    </script>
 </body>
 </html>

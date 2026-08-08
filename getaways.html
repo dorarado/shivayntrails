@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himalayan Getaways & Scenic Retreats | Shivayan Trails</title>
+    <meta name="description" content="Discover 22 curated Himalayan getaways and retreats with Shivayan Trails. Apple valleys of Harsil, snow sports in Auli, Spiti road trips, Jibhi wooden cottages, and peaceful mountain hideaways.">
+    <meta name="keywords" content="Himalayan Getaways, Harsil Valley, Auli ski resort, Spiti road trip, Jibhi cottages, Bir Billing paragliding, Manali Kasol, Leh Ladakh, Kashmir getaways">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon-512.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/advanced.css">
+    <link rel="stylesheet" href="css/trips-and-pages.css">
+</head>
+<body>
+
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo" id="nav-logo">
+                <div class="logo-icon"><i data-lucide="mountain-snow"></i></div>
+                <span class="logo-text">Shivayan Trails</span>
+            </a>
+
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-dropdown">
+                    <a href="treks.html" class="nav-link">Treks <i data-lucide="chevron-down" class="dropdown-icon"></i></a>
+                    <div class="dropdown-content">
+                        <a href="treks.html?slug=kedarkantha">Kedarkantha Trek</a>
+                        <a href="treks.html?slug=har-ki-dun">Har Ki Dun Trek</a>
+                        <a href="treks.html?slug=valley-of-flowers">Valley of Flowers</a>
+                        <a href="treks.html" class="view-all">View All 19 Treks →</a>
+                    </div>
+                </li>
+                <li><a href="getaways.html" class="nav-link active">Getaways</a></li>
+                <li><a href="dham-yatra.html" class="nav-link">Dham Yatra</a></li>
+                <li><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="blogs.html" class="nav-link">Blogs</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <a href="https://wa.me/919058344407" target="_blank" class="nav-cta" id="nav-whatsapp">
+                    <i data-lucide="message-circle"></i>
+                    <span>WhatsApp</span>
+                </a>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- PAGE HERO BANNER -->
+    <header class="page-banner">
+        <div class="page-banner-bg" style="background-image: url('assets/images/mountain-lake-hero.jpg');"></div>
+        <div class="page-banner-overlay"></div>
+        <div class="page-banner-content" data-animate="fade-up">
+            <div class="page-banner-tag">
+                <i data-lucide="compass"></i>
+                <span>Leisure & Mountain Escapes</span>
+            </div>
+            <h1 class="page-banner-title">Himalayan Getaways</h1>
+            <p class="page-banner-desc">
+                22 hand-picked retreats, boutique stays, riverside camps, and road expeditions across Uttarakhand, Himachal, Ladakh, Kashmir & Rajasthan.
+            </p>
+        </div>
+    </header>
+
+    <!-- CATALOG TOOLBAR -->
+    <section class="catalog-toolbar-wrapper">
+        <div class="container">
+            <div class="catalog-toolbar">
+                <div class="search-box">
+                    <i data-lucide="search"></i>
+                    <input type="text" id="catalog-search" class="search-input" placeholder="Search getaways (e.g. Auli, Jibhi, Spiti, Leh)...">
+                </div>
+
+                <div class="filter-pills">
+                    <button class="filter-pill active" data-filter="all">All Getaways (22)</button>
+                    <button class="filter-pill" data-filter="Valley">Rivers & Valleys</button>
+                    <button class="filter-pill" data-filter="Ski">Snow & Ski</button>
+                    <button class="filter-pill" data-filter="Desert">Desert & Heritage</button>
+                    <button class="filter-pill" data-filter="Paragliding">Air Adventures</button>
+                </div>
+
+                <div style="display: flex; gap: 8px;">
+                    <select id="catalog-sort" class="filter-select" aria-label="Sort getaways">
+                        <option value="recommended">Recommended</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="duration-low">Duration: Short to Long</option>
+                        <option value="duration-high">Duration: Long to Short</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="results-meta">
+                <span id="results-count">22 Getaways</span>
+                <span style="display: inline-flex; align-items: center; gap: 4px;">
+                    <i data-lucide="sparkles" style="width: 13px; height: 13px; color: var(--color-gold);"></i> Handcrafted Boutique Stays & Curated Transport
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- GETAWAYS GRID -->
+    <main class="container">
+        <div class="catalog-grid" id="getaways-catalog">
+            <!-- Rendered dynamically by js/app.js -->
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <div class="logo-icon"><i data-lucide="mountain-snow"></i></div>
+                        <span class="logo-text">Shivayan Trails</span>
+                    </a>
+                    <p class="footer-desc">
+                        Curating meaningful, peaceful, and awe-inspiring journeys across the Himalayas. Hand-picked mountain cottages, local route pioneers, and 24/7 on-ground assistance.
+                    </p>
+                    <div class="footer-social">
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+                        <a href="https://wa.me/919058344407" target="_blank" aria-label="WhatsApp"><i data-lucide="message-circle"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Explore</h4>
+                    <ul class="footer-links">
+                        <li><a href="treks.html">Himalayan Treks</a></li>
+                        <li><a href="getaways.html">Scenic Getaways</a></li>
+                        <li><a href="dham-yatra.html">Sacred Dham Yatra</a></li>
+                        <li><a href="gallery.html">Visual Gallery</a></li>
+                        <li><a href="blogs.html">Mountain Journals</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Company & Legal</h4>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Our Founders</a></li>
+                        <li><a href="contact.html">Contact & Base Locations</a></li>
+                        <li><a href="terms.html">Terms & Cancellation Policy</a></li>
+                        <li><a href="terms.html#faq">Booking FAQ</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Base Location</h4>
+                    <p style="font-size: 13px; color: rgba(242,240,235,0.7); line-height: 1.7;">
+                        Shivayan Trails HQ<br>
+                        Dehradun & Rishikesh, Uttarakhand<br>
+                        <strong>Call/WhatsApp:</strong> +91 90583 44407<br>
+                        <strong>Email:</strong> shivayantrails@gmail.com
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Shivayan Trails. All rights reserved.</p>
+                <p>Developed by <a href="https://codesaint.in" target="_blank">Codesaint Technologies Pvt. Ltd.</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top"><i data-lucide="chevron-up"></i></button>
+    <a href="https://wa.me/919058344407" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+        <i data-lucide="message-circle"></i>
+        <span class="whatsapp-tooltip">Chat with us!</span>
+    </a>
+
+    <script src="js/trips-data.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/advanced.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

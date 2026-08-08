@@ -26,6 +26,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/advanced.css">
+    <link rel="stylesheet" href="css/trips-and-pages.css">
 
     <!-- Schema.org Structured Data -->
     <script type="application/ld+json">
@@ -119,49 +120,49 @@
 
 
     <!-- ═══════════════════════════════════════ -->
-    <!-- HERO — EXACT IMAGE 1 EDITORIAL LAYOUT    -->
+    <!-- HERO — MAJESTIC HIMALAYAN MOUNTAIN HERO  -->
     <!-- ═══════════════════════════════════════ -->
     <section class="hero" id="hero">
         <div class="hero-bg" id="hero-bg">
             <div class="hero-overlay" id="hero-overlay"></div>
         </div>
         
-        <div class="hero-editorial-wrapper">
-            <div class="hero-editorial-card" data-animate="scale-up">
-                <!-- Main Display Title with Center Image Cutout -->
-                <div class="hero-editorial-title">
-                    <span class="editorial-word word-solid">SHIV</span>
-                    <div class="editorial-photo-card">
-                        <img src="assets/images/kedarnath-inset.png" alt="Kedarnath Temple" class="editorial-inset-img">
-                        <span class="editorial-word word-overlay">AYAN</span>
-                    </div>
-                    <span class="editorial-word word-solid">TRAILS</span>
-                </div>
+        <div class="hero-content" data-animate="fade-up">
+            <div class="hero-tag">
+                <i data-lucide="mountain-snow"></i>
+                <span>Sacred Himalayan Expeditions</span>
+            </div>
+            
+            <h1 class="hero-title">SHIVAYAN TRAILS</h1>
+            
+            <p class="hero-subtitle">
+                Where Sacred Peaks Meet Boundless Adventures. Hand-crafted treks, spiritual Dham Yatras, and peaceful Himalayan getaways guided by certified local mountain pioneers.
+            </p>
 
-                <!-- Search Container -->
-                <div class="hero-search">
-                    <div class="search-wrapper">
-                        <i data-lucide="search" class="search-icon"></i>
-                        <input type="text" id="hero-search-input" placeholder="Search treks & pilgrimages... (Kedarkantha, Chopta, Char Dham)" autocomplete="off">
-                        <button class="search-btn" id="hero-search-btn">Explore</button>
-                    </div>
-                    <div class="search-suggestions" id="search-suggestions">
-                        <div class="suggestion-group">
-                            <span class="suggestion-label">Popular Expeditions</span>
-                            <a href="treks.html?slug=kedarkantha" class="suggestion-item">
-                                <i data-lucide="mountain"></i> Kedarkantha Trek
-                            </a>
-                            <a href="treks.html?slug=valley-of-flowers" class="suggestion-item">
-                                <i data-lucide="flower-2"></i> Valley of Flowers
-                            </a>
-                            <a href="dham-yatra.html?slug=kedarnath" class="suggestion-item">
-                                <i data-lucide="landmark"></i> Kedarnath Dham Yatra
-                            </a>
-                            <a href="getaways.html?slug=chopta" class="suggestion-item">
-                                <i data-lucide="trees"></i> Chopta Getaway
-                            </a>
-                        </div>
-                    </div>
+            <div class="hero-actions">
+                <a href="#destinations" class="hero-cta-btn">
+                    <span>Explore Destinations</span>
+                    <i data-lucide="compass"></i>
+                </a>
+                <a href="treks.html" class="hero-secondary-btn">
+                    <span>View All Treks</span>
+                    <i data-lucide="arrow-right"></i>
+                </a>
+            </div>
+
+            <!-- Quick Trust Badges -->
+            <div class="hero-badges">
+                <div class="hero-badge-item">
+                    <i data-lucide="shield-check"></i>
+                    <span>Certified Mountain Guides</span>
+                </div>
+                <div class="hero-badge-item">
+                    <i data-lucide="compass"></i>
+                    <span>Curated Himalayan Routes</span>
+                </div>
+                <div class="hero-badge-item">
+                    <i data-lucide="star"></i>
+                    <span>5,000+ Happy Travellers</span>
                 </div>
             </div>
         </div>
@@ -211,6 +212,37 @@
                 <span class="section-tag">Explore</span>
                 <h2 class="section-title">Explore by <span class="highlight">Destination</span></h2>
                 <p class="section-subtitle">Choose your dream destination. Each place tells its own story.</p>
+            </div>
+            
+            <!-- Light-Themed Search Bar in Explore by Destination -->
+            <div class="destination-search-container" data-animate="fade-up" data-delay="100">
+                <div class="destination-search destination-search--light">
+                    <div class="search-wrapper search-wrapper--light">
+                        <i data-lucide="search" class="search-icon"></i>
+                        <input type="text" id="hero-search-input" placeholder="Search by destination, trek, or region... (e.g. Kedarkantha, Chopta, Kedarnath)" autocomplete="off">
+                        <button class="search-btn" id="hero-search-btn" type="button" aria-label="Explore Destinations">
+                            <span>Explore</span>
+                            <i data-lucide="arrow-right"></i>
+                        </button>
+                    </div>
+                    <div class="search-suggestions search-suggestions--light" id="search-suggestions">
+                        <div class="suggestion-group">
+                            <span class="suggestion-label">Popular Expeditions</span>
+                            <a href="treks.html?slug=kedarkantha" class="suggestion-item">
+                                <i data-lucide="mountain"></i> <span>Kedarkantha Trek</span>
+                            </a>
+                            <a href="treks.html?slug=valley-of-flowers" class="suggestion-item">
+                                <i data-lucide="flower-2"></i> <span>Valley of Flowers</span>
+                            </a>
+                            <a href="dham-yatra.html?slug=kedarnath" class="suggestion-item">
+                                <i data-lucide="landmark"></i> <span>Kedarnath Dham Yatra</span>
+                            </a>
+                            <a href="getaways.html?slug=chopta" class="suggestion-item">
+                                <i data-lucide="trees"></i> <span>Chopta Getaway</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
             
             <div class="destinations-grid">
@@ -357,7 +389,7 @@
         <div class="container">
             <div class="section-header" data-animate="fade-up">
                 <span class="section-tag">Why Choose Us</span>
-                <h2 class="section-title">Why Travel With <span class="highlight">Shivayan Trails</span></h2>
+                <h2 class="section-title">Why Travel With <span class="highlight">Shivayan Trails?</span></h2>
                 <p class="section-subtitle">We don't just take you to the mountains — we bring the mountains to life.</p>
             </div>
             
@@ -822,18 +854,17 @@
                     <h4>Company</h4>
                     <ul>
                         <li><a href="about.html">About Us</a></li>
-                        <li><a href="blogs.html">Blogs</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="blogs.html">Mountain Journals</a></li>
+                        <li><a href="contact.html">Contact & Bases</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
-                    <h4>Legal</h4>
+                    <h4>Legal & Safety</h4>
                     <ul>
                         <li><a href="terms.html">Terms & Conditions</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="refund.html">Cancellation Policy</a></li>
+                        <li><a href="terms.html#health">Health Guidelines</a></li>
+                        <li><a href="terms.html#safety">Leave No Trace Policy</a></li>
                     </ul>
                 </div>
                 
@@ -902,7 +933,9 @@
         </div>
     </div>
 
+    <script src="js/trips-data.js"></script>
     <script src="js/main.js"></script>
     <script src="js/advanced.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
