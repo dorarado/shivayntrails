@@ -2312,35 +2312,35 @@ ul { list-style: none; }
 /* WhatsApp Float */
 .whatsapp-float {
     position: fixed;
-    bottom: var(--space-8);
-    left: var(--space-8);
-    width: 56px;
-    height: 56px;
+    bottom: 24px;
+    right: 24px;
+    width: 52px;
+    height: 52px;
     display: flex;
     align-items: center;
     justify-content: center;
     background: #25D366;
     color: #fff;
     border-radius: var(--radius-full);
-    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4);
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45);
     z-index: var(--z-float);
     transition: all var(--transition-base);
-    animation: pulse-wa 2s infinite;
+    animation: pulse-wa 2.5s infinite;
 }
 
 .whatsapp-float:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.5);
+    box-shadow: 0 6px 30px rgba(37, 211, 102, 0.6);
 }
 
 .whatsapp-float svg, .whatsapp-float i {
-    width: 28px;
-    height: 28px;
+    width: 26px;
+    height: 26px;
 }
 
 @keyframes pulse-wa {
     0% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
-    50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6), 0 0 0 8px rgba(37, 211, 102, 0.1); }
+    50% { box-shadow: 0 4px 30px rgba(37, 211, 102, 0.6), 0 0 0 10px rgba(37, 211, 102, 0.12); }
     100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.4); }
 }
 
@@ -2364,6 +2364,40 @@ ul { list-style: none; }
 .whatsapp-float:hover .whatsapp-tooltip {
     opacity: 1;
     transform: translateX(0);
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 84px;
+    right: 24px;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(10, 17, 21, 0.85);
+    border: 1px solid rgba(218, 186, 111, 0.35);
+    color: var(--color-gold);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 98;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.back-to-top.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background: var(--color-gold);
+    color: #060c10;
+    transform: translateY(-3px);
 }
 
 
@@ -2534,7 +2568,7 @@ ul { list-style: none; }
         flex-shrink: 0;
     }
 
-    .footer-grid {
+    .footer-links {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -2551,22 +2585,84 @@ ul { list-style: none; }
     }
 }
 
-/* Mobile */
+/* RESPONSIVE MEDIA QUERIES (MOBILE REFINEMENTS) */
+@media (max-width: 992px) {
+    .destinations-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .testimonial-card {
+        min-width: calc(50% - var(--space-4));
+    }
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 768px) {
+    /* Navbar on Mobile */
+    .nav-container {
+        padding: 0 16px;
+        gap: 10px;
+    }
+
+    .nav-logo {
+        font-size: 1.15rem;
+        white-space: nowrap;
+        gap: 8px;
+    }
+
+    .logo-text {
+        font-size: 1.12rem;
+        white-space: nowrap;
+        font-weight: 700;
+    }
+
+    .logo-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .logo-icon svg, .logo-icon i {
+        width: 18px;
+        height: 18px;
+    }
+
+    .nav-cta {
+        width: 36px;
+        height: 36px;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    .nav-cta span {
+        display: none;
+    }
+
+    .mobile-toggle {
+        display: flex;
+        z-index: 1001;
+        position: relative;
+        padding: 6px;
+    }
+
+    /* Mobile Navigation Drawer */
     .nav-menu {
         position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        inset: 0;
         width: 100%;
-        height: 100%;
+        height: 100vh;
         height: 100dvh;
-        background: var(--color-surface);
+        background: rgba(6, 12, 16, 0.98);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
         flex-direction: column;
-        justify-content: center;
-        gap: var(--space-3);
-        padding: var(--space-8) var(--space-6);
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 0;
+        padding: calc(var(--navbar-height) + 16px) 24px 40px;
         opacity: 0;
         visibility: hidden;
         pointer-events: none;
@@ -2584,10 +2680,19 @@ ul { list-style: none; }
     }
 
     .nav-link {
-        color: var(--color-text);
-        font-size: var(--text-lg);
-        padding: var(--space-3) var(--space-4);
+        font-family: 'Cinzel', serif;
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: #FFFFFF;
+        letter-spacing: 0.05em;
+        padding: 14px 4px;
+        border-bottom: 1px solid rgba(218, 186, 111, 0.12);
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-radius: 0;
+        background: transparent !important;
     }
 
     .nav-link:hover, .nav-link.active {
@@ -2595,33 +2700,49 @@ ul { list-style: none; }
         color: var(--color-primary);
     }
 
-    [data-theme="dark"] .nav-link:hover,
-    [data-theme="dark"] .nav-link.active {
-        background: rgba(212, 168, 67, 0.1);
-        color: var(--color-gold);
+    .nav-cta {
+        display: none !important;
     }
 
     .dropdown-content {
+        display: none;
         position: static;
         transform: none;
         box-shadow: none;
         border: none;
-        padding-left: var(--space-4);
+        padding: 4px 0 10px 16px;
         background: transparent;
+        flex-direction: column;
+        gap: 6px;
+        opacity: 1;
+        visibility: visible;
     }
 
-    .nav-dropdown:hover .dropdown-content {
-        transform: none;
-    }
-
-    .mobile-toggle {
+    .nav-dropdown.open .dropdown-content,
+    .nav-dropdown.expanded .dropdown-content,
+    .nav-dropdown:hover .dropdown-content,
+    .nav-dropdown:focus-within .dropdown-content {
         display: flex;
-        z-index: 1001;
-        position: relative;
     }
 
-    .nav-cta span {
-        display: none;
+    .dropdown-content a {
+        font-family: var(--font-body);
+        font-size: 0.95rem;
+        color: rgba(242, 240, 235, 0.8);
+        padding: 6px 0;
+        border-radius: 0;
+        border: none;
+    }
+
+    .dropdown-content a:hover {
+        background: transparent;
+        color: var(--color-gold);
+    }
+
+    .dropdown-content .view-all {
+        border-top: 1px solid rgba(218, 186, 111, 0.15);
+        margin-top: 4px;
+        padding-top: 8px;
     }
 
     .hero {
@@ -2780,13 +2901,15 @@ ul { list-style: none; }
     }
 
     .whatsapp-float {
-        bottom: var(--space-4);
-        left: var(--space-4);
+        bottom: 20px;
+        right: 20px;
+        left: auto;
     }
 
     .back-to-top {
-        bottom: var(--space-4);
-        right: var(--space-4);
+        bottom: 76px;
+        right: 20px;
+        left: auto;
     }
 
     .whatsapp-tooltip {
