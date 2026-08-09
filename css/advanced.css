@@ -199,27 +199,38 @@
 }
 
 .loader-crest {
-    width: 54px;
-    height: 54px;
+    width: 76px;
+    height: 76px;
     margin: 0 auto var(--space-4);
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(200, 148, 62, 0.12);
-    border: 1px solid rgba(200, 148, 62, 0.3);
+    background: #fdfbf7;
+    border: 2px solid rgba(218, 186, 111, 0.6);
     border-radius: var(--radius-full);
     color: var(--color-gold);
     animation: crestPulse 2s ease-in-out infinite;
+    overflow: hidden;
+    padding: 2px;
+    box-shadow: 0 0 25px rgba(218, 186, 111, 0.35);
+}
+
+.loader-crest img, .loader-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
 }
 
 .loader-crest svg, .loader-crest i {
-    width: 26px;
-    height: 26px;
+    width: 32px;
+    height: 32px;
 }
 
 @keyframes crestPulse {
-    0%, 100% { box-shadow: 0 0 15px rgba(200, 148, 62, 0.2); transform: scale(1); }
-    50% { box-shadow: 0 0 35px rgba(200, 148, 62, 0.4); transform: scale(1.05); }
+    0%, 100% { box-shadow: 0 0 15px rgba(200, 148, 62, 0.3); transform: scale(1); }
+    50% { box-shadow: 0 0 35px rgba(200, 148, 62, 0.6); transform: scale(1.06); }
 }
 
 .loader-brand {

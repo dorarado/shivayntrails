@@ -11,9 +11,11 @@
     <meta property="og:title" content="Shivayan Trails | Elevate Your Adventure">
     <meta property="og:description" content="Curated Himalayan treks, serene getaways, and sacred pilgrimages — crafted for the adventurer in you.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://shivayantrails.com">
-    <meta property="og:image" content="assets/images/og-image.jpg">
-    
+    <!-- Favicon / Website Icons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon-512.png">
+    <link rel="apple-touch-icon" href="assets/images/logo.png">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,7 +58,7 @@
         <div class="loader-curtain curtain-right"></div>
         <div class="loader-inner">
             <div class="loader-crest">
-                <i data-lucide="mountain-snow"></i>
+                <img src="assets/images/logo.png" alt="Shivayan Trails Logo" class="loader-logo-img">
             </div>
             <h2 class="loader-brand">SHIVAYAN TRAILS</h2>
             <p class="loader-tagline">SACRED HIMALAYAN EXPEDITIONS</p>
@@ -80,28 +82,20 @@
         <div class="nav-container">
             <a href="index.html" class="nav-logo" id="nav-logo">
                 <div class="logo-icon">
-                    <i data-lucide="mountain-snow"></i>
+                    <img src="assets/images/logo.png" alt="Shivayan Trails Logo" class="nav-logo-img">
                 </div>
                 <span class="logo-text">Shivayan Trails</span>
             </a>
 
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="index.html" class="nav-link active">Home</a></li>
-                <li class="nav-dropdown">
-                    <a href="treks.html" class="nav-link">Treks <i data-lucide="chevron-down" class="dropdown-icon"></i></a>
-                    <div class="dropdown-content">
-                        <a href="treks.html?slug=kedarkantha">Kedarkantha Trek</a>
-                        <a href="treks.html?slug=har-ki-dun">Har Ki Dun Trek</a>
-                        <a href="treks.html?slug=valley-of-flowers">Valley of Flowers</a>
-                        <a href="treks.html?slug=kuari-pass">Kuari Pass Trek</a>
-                        <a href="treks.html" class="view-all">View All Treks →</a>
-                    </div>
-                </li>
+                <li><a href="treks.html" class="nav-link">Treks</a></li>
                 <li><a href="getaways.html" class="nav-link">Getaways</a></li>
                 <li><a href="dham-yatra.html" class="nav-link">Dham Yatra</a></li>
                 <li><a href="gallery.html" class="nav-link">Gallery</a></li>
                 <li><a href="blogs.html" class="nav-link">Blogs</a></li>
                 <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link">Contact</a></li>
             </ul>
 
             <div class="nav-actions">
@@ -443,7 +437,7 @@
                 <div class="editorial-sidebar">
                     <article class="editorial-card" data-animate="fade-up" data-delay="100">
                         <div class="editorial-card-image">
-                            <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80" alt="Chopta Getaway" loading="lazy">
+                            <img src="assets/images/getaways/chopta.jpg" alt="Chopta Getaway" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=500&q=80'">
                         </div>
                         <div class="editorial-card-body editorial-card-body--getaway">
                             <span class="editorial-category">Getaway</span>
@@ -462,7 +456,7 @@
 
                     <article class="editorial-card" data-animate="fade-up" data-delay="200">
                         <div class="editorial-card-image">
-                            <img src="https://images.unsplash.com/photo-1564507592064-52ef18d32609?w=500&q=80" alt="Kedarnath Dham Yatra" loading="lazy">
+                            <img src="assets/images/dham-yatra/kedarnath.jpg" alt="Kedarnath Dham Yatra" loading="lazy" onerror="this.src='assets/images/kedarnath-hero.png'">
                         </div>
                         <div class="editorial-card-body editorial-card-body--dham">
                             <span class="editorial-category">Dham Yatra</span>
@@ -481,7 +475,7 @@
 
                     <article class="editorial-card" data-animate="fade-up" data-delay="300">
                         <div class="editorial-card-image">
-                            <img src="https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?w=500&q=80" alt="Har Ki Dun Trek" loading="lazy">
+                            <img src="assets/images/treks/har-ki-dun.jpg" alt="Har Ki Dun Trek" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1585409677983-0f6c41ca9c3b?w=500&q=80'">
                         </div>
                         <div class="editorial-card-body editorial-card-body--trek">
                             <span class="editorial-category">Trek</span>
@@ -872,7 +866,7 @@
             <div class="footer-grid">
                 <div class="footer-brand">
                     <a href="index.html" class="footer-logo">
-                        <div class="logo-icon"><i data-lucide="mountain-snow"></i></div>
+                        <div class="logo-icon"><img src="assets/images/logo.png" alt="Shivayan Trails Logo" class="nav-logo-img"></div>
                         <span>Shivayan Trails</span>
                     </a>
                     <p>Curated Himalayan experiences — treks, getaways, and sacred journeys crafted with care.</p>

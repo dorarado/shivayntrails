@@ -364,15 +364,32 @@ ul { list-style: none; }
 }
 
 .logo-icon {
-    width: 36px;
-    height: 36px;
+    width: 38px;
+    height: 38px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(218, 186, 111, 0.15);
-    border: 1px solid rgba(218, 186, 111, 0.3);
-    border-radius: var(--radius-md);
-    color: var(--color-gold);
+    background: #fdfbf7;
+    border: 1.5px solid rgba(218, 186, 111, 0.45);
+    border-radius: var(--radius-full);
+    overflow: hidden;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    transition: transform var(--transition-fast), border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.nav-logo:hover .logo-icon, .footer-logo:hover .logo-icon {
+    transform: scale(1.06);
+    border-color: var(--color-gold);
+    box-shadow: 0 0 12px rgba(218, 186, 111, 0.45);
+}
+
+.logo-icon img, .nav-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 50%;
 }
 
 .logo-icon svg, .logo-icon i {
@@ -2772,13 +2789,8 @@ ul { list-style: none; }
     }
 
     .logo-icon {
-        width: 32px;
-        height: 32px;
-    }
-
-    .logo-icon svg, .logo-icon i {
-        width: 18px;
-        height: 18px;
+        width: 34px;
+        height: 34px;
     }
 
     .nav-cta {
