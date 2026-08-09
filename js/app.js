@@ -327,16 +327,19 @@ window.openTripModal = function(slug) {
         <div class="modal-bottom-bar">
             <div class="modal-price-tag">
                 <span class="p-label">All-Inclusive Price</span>
-                <span class="p-val">${window.ShivayanHelper.formatPrice(trip.price)} <small style="font-size: 12px; font-weight: normal; color: rgba(255,255,255,0.6);">/ person</small></span>
+                <div class="p-val-wrap">
+                    <span class="p-val">${window.ShivayanHelper.formatPrice(trip.price)}</span>
+                    <span class="p-unit">/ person</span>
+                </div>
             </div>
             <div class="modal-cta-group">
-                <a href="${window.ShivayanHelper.getWhatsAppLink(trip)}" target="_blank" rel="noopener" class="btn-modal-wa">
+                <a href="${window.ShivayanHelper.getWhatsAppLink(trip)}" target="_blank" rel="noopener" class="btn-modal-wa" aria-label="WhatsApp Inquiry">
                     <i data-lucide="message-circle"></i>
                     <span>WhatsApp Inquiry</span>
                 </a>
-                <button class="btn-modal-book" onclick="openBookingModal('${trip.slug}')">
+                <button class="btn-modal-book" onclick="openBookingModal('${trip.slug}')" aria-label="Book Trip Now">
                     <i data-lucide="calendar-check"></i>
-                    <span>Book Trip</span>
+                    <span>Book Now</span>
                 </button>
             </div>
         </div>
@@ -400,7 +403,7 @@ function initBookingModal() {
                         <input type="text" id="book-name" class="book-input" placeholder="e.g. Rahul Sharma" required>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div class="book-form-row">
                         <div class="book-form-group">
                             <label class="book-label">WhatsApp Number *</label>
                             <input type="tel" id="book-phone" class="book-input" placeholder="+91 98765 43210" required>
@@ -411,7 +414,7 @@ function initBookingModal() {
                         </div>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+                    <div class="book-form-row">
                         <div class="book-form-group">
                             <label class="book-label">Preferred Month / Date</label>
                             <input type="text" id="book-date" class="book-input" placeholder="e.g. Next Month / Oct 15">
