@@ -123,8 +123,10 @@ function initScrollAnimations() {
 
 
 /* ─────────────────────────────────────────────────
-   TESTIMONIAL CAROUSEL
+   TESTIMONIAL CAROUSEL & CUSTOMER REVIEWS
    ───────────────────────────────────────────────── */
+let testimonialAutoPlay = null;
+
 function initTestimonialCarousel() {
     const track = document.getElementById('testimonial-track');
     const prevBtn = document.getElementById('testimonial-prev');
@@ -133,22 +135,13 @@ function initTestimonialCarousel() {
     
     if (!track || !prevBtn || !nextBtn || !dotsContainer) return;
     
-    const cards = track.querySelectorAll('.testimonial-card');
+    // Load persisted user reviews
+    loadStoredReviews(track);
+    
+    let cards = track.querySelectorAll('.testimonial-card');
     let currentIndex = 0;
     let cardsPerView = getCardsPerView();
     let totalPages = Math.ceil(cards.length / cardsPerView);
-    
-    // Create dots
-    function createDots() {
-        dotsContainer.innerHTML = '';
-        for (let i = 0; i < totalPages; i++) {
-            const dot = document.createElement('div');
-            dot.classList.add('carousel-dot');
-            if (i === 0) dot.classList.add('active');
-            dot.addEventListener('click', () => goToPage(i));
-            dotsContainer.appendChild(dot);
-        }
-    }
     
     function getCardsPerView() {
         if (window.innerWidth <= 768) return 1;
@@ -156,15 +149,36 @@ function initTestimonialCarousel() {
         return 3;
     }
     
+    // Create dots
+    function createDots() {
+        cards = track.querySelectorAll('.testimonial-card');
+        totalPages = Math.ceil(cards.length / cardsPerView);
+        dotsContainer.innerHTML = '';
+        for (let i = 0; i < totalPages; i++) {
+            const dot = document.createElement('div');
+            dot.classList.add('carousel-dot');
+            if (i === Math.floor(currentIndex / cardsPerView)) dot.classList.add('active');
+            dot.addEventListener('click', () => goToPage(i));
+            dotsContainer.appendChild(dot);
+        }
+    }
+    
     function updateCarousel() {
-        const cardWidth = cards[0].offsetWidth + parseInt(getComputedStyle(cards[0]).marginLeft) * 2;
+        cards = track.querySelectorAll('.testimonial-card');
+        if (!cards.length) return;
+        
+        const cardStyle = window.getComputedStyle(cards[0]);
+        const cardMargin = (parseFloat(cardStyle.marginLeft) || 0) + (parseFloat(cardStyle.marginRight) || 0);
+        const cardWidth = cards[0].offsetWidth + cardMargin;
         const offset = currentIndex * cardWidth;
-        track.style.transform = `translateX(-${offset})`;
+        
+        track.style.transform = `translateX(-${offset}px)`;
         
         // Update dots
         const dots = dotsContainer.querySelectorAll('.carousel-dot');
+        const activeDotIndex = Math.floor(currentIndex / cardsPerView);
         dots.forEach((dot, i) => {
-            dot.classList.toggle('active', i === Math.floor(currentIndex / cardsPerView));
+            dot.classList.toggle('active', i === activeDotIndex);
         });
     }
     
@@ -174,45 +188,236 @@ function initTestimonialCarousel() {
         updateCarousel();
     }
     
-    prevBtn.addEventListener('click', () => {
+    prevBtn.onclick = () => {
         currentIndex = Math.max(0, currentIndex - cardsPerView);
         updateCarousel();
-    });
+    };
     
-    nextBtn.addEventListener('click', () => {
+    nextBtn.onclick = () => {
         currentIndex += cardsPerView;
         if (currentIndex >= cards.length) currentIndex = 0;
         updateCarousel();
-    });
+    };
     
     // Auto-play
-    let autoPlay = setInterval(() => {
-        currentIndex += cardsPerView;
-        if (currentIndex >= cards.length) currentIndex = 0;
-        updateCarousel();
-    }, 5000);
-    
-    // Pause on hover
-    track.addEventListener('mouseenter', () => clearInterval(autoPlay));
-    track.addEventListener('mouseleave', () => {
-        autoPlay = setInterval(() => {
+    function startAutoPlay() {
+        clearInterval(testimonialAutoPlay);
+        testimonialAutoPlay = setInterval(() => {
+            cards = track.querySelectorAll('.testimonial-card');
             currentIndex += cardsPerView;
             if (currentIndex >= cards.length) currentIndex = 0;
             updateCarousel();
-        }, 5000);
-    });
+        }, 5500);
+    }
+    
+    startAutoPlay();
+    
+    // Pause on hover
+    track.onmouseenter = () => clearInterval(testimonialAutoPlay);
+    track.onmouseleave = () => startAutoPlay();
+    
+    // Touch / Swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+    
+    track.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+        clearInterval(testimonialAutoPlay);
+    }, { passive: true });
+    
+    track.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) > 40) {
+            if (diff > 0) {
+                // Swipe Left -> Next
+                currentIndex = Math.min(cards.length - 1, currentIndex + cardsPerView);
+            } else {
+                // Swipe Right -> Prev
+                currentIndex = Math.max(0, currentIndex - cardsPerView);
+            }
+            updateCarousel();
+        }
+        startAutoPlay();
+    }, { passive: true });
     
     // Handle resize
     window.addEventListener('resize', throttle(() => {
         cardsPerView = getCardsPerView();
-        totalPages = Math.ceil(cards.length / cardsPerView);
         createDots();
         currentIndex = 0;
         updateCarousel();
-    }, 250));
+    }, 200));
     
     createDots();
     updateCarousel();
+    initStarRatingPicker();
+}
+
+function loadStoredReviews(track) {
+    try {
+        const stored = JSON.parse(localStorage.getItem('shivayan_user_reviews') || '[]');
+        if (Array.isArray(stored) && stored.length > 0) {
+            stored.forEach(r => {
+                const card = createReviewCardElement(r);
+                track.insertBefore(card, track.firstChild);
+            });
+        }
+    } catch(e) {
+        console.warn('Error loading stored reviews:', e);
+    }
+}
+
+function createReviewCardElement(review) {
+    const card = document.createElement('div');
+    card.className = 'testimonial-card';
+    const stars = '★'.repeat(review.rating || 5);
+    
+    card.innerHTML = `
+        <div class="testimonial-stars" style="color: var(--color-gold);">${stars}</div>
+        <blockquote class="testimonial-quote">
+            "${escapeHTML(review.comment)}"
+        </blockquote>
+        <div class="testimonial-author">
+            <div class="author-avatar">
+                <i data-lucide="user-circle"></i>
+            </div>
+            <div class="author-info">
+                <strong>${escapeHTML(review.author)}</strong>
+                <span>${escapeHTML(review.trip)} · ${escapeHTML(review.city)}</span>
+            </div>
+            <div class="verified-badge">
+                <i data-lucide="badge-check"></i> Verified
+            </div>
+        </div>
+    `;
+    return card;
+}
+
+function escapeHTML(str) {
+    if (!str) return '';
+    return str.replace(/[&<>'"]/g, tag => ({
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        "'": '&#39;',
+        '"': '&quot;'
+    }[tag] || tag));
+}
+
+// ─── Interactive Star Rating in Modal ───
+function initStarRatingPicker() {
+    const picker = document.getElementById('star-rating-picker');
+    const input = document.getElementById('review-rating-value');
+    if (!picker || !input) return;
+    
+    const stars = picker.querySelectorAll('.star-pick');
+    stars.forEach((star, index) => {
+        star.addEventListener('click', () => {
+            const rating = index + 1;
+            input.value = rating;
+            stars.forEach((s, i) => {
+                s.style.opacity = i < rating ? '1' : '0.25';
+                s.classList.toggle('active', i < rating);
+            });
+        });
+    });
+}
+
+// ─── Modal Open / Close / Submit ───
+window.openReviewModal = function() {
+    const modal = document.getElementById('review-submission-modal');
+    if (modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+    }
+};
+
+window.closeReviewModal = function() {
+    const modal = document.getElementById('review-submission-modal');
+    if (modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+};
+
+window.submitCustomerReview = function(e) {
+    e.preventDefault();
+    const author = document.getElementById('review-author')?.value.trim();
+    const city = document.getElementById('review-city')?.value.trim();
+    const trip = document.getElementById('review-trip')?.value;
+    const rating = parseInt(document.getElementById('review-rating-value')?.value || '5');
+    const comment = document.getElementById('review-comment')?.value.trim();
+    
+    if (!author || !city || !comment) {
+        alert('Please fill in all required fields.');
+        return;
+    }
+    
+    const newReview = { author, city, trip, rating, comment, date: new Date().toISOString() };
+    
+    // Save to localStorage
+    try {
+        const stored = JSON.parse(localStorage.getItem('shivayan_user_reviews') || '[]');
+        stored.unshift(newReview);
+        localStorage.setItem('shivayan_user_reviews', JSON.stringify(stored));
+    } catch(err) {
+        console.warn('Storage failed:', err);
+    }
+    
+    // Prepend to DOM
+    const track = document.getElementById('testimonial-track');
+    if (track) {
+        const newCard = createReviewCardElement(newReview);
+        track.insertBefore(newCard, track.firstChild);
+        if (typeof lucide !== 'undefined') lucide.createIcons();
+        initTestimonialCarousel();
+    }
+    
+    // Close modal & reset
+    closeReviewModal();
+    const form = document.getElementById('customer-review-form');
+    if (form) form.reset();
+    
+    // Show toast notification
+    showFeedbackToast('Thank you! Your verified review has been published.');
+};
+
+function showFeedbackToast(msg) {
+    let toast = document.getElementById('feedback-toast');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'feedback-toast';
+        toast.style.cssText = `
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: #11221b;
+            color: #2ecc71;
+            border: 1px solid #2ecc71;
+            border-radius: 99px;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            z-index: 9999;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: transform 0.4s ease, opacity 0.4s ease;
+            opacity: 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        `;
+        document.body.appendChild(toast);
+    }
+    toast.innerHTML = `<span>✓</span> <span>${msg}</span>`;
+    toast.style.opacity = '1';
+    toast.style.transform = 'translateX(-50%) translateY(0)';
+    setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(-50%) translateY(100px)';
+    }, 4500);
 }
 
 
