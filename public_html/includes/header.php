@@ -32,9 +32,11 @@ function is_active_nav($href, $current) {
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title><?= h($page_title) ?></title>
 <meta name="description" content="<?= h($meta_description) ?>">
-<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="48x48" href="images/favicon-48.png">
+<link rel="icon" type="image/png" sizes="192x192" href="images/favicon-192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="images/favicon-512.png">
-<link rel="apple-touch-icon" href="images/favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/favicon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Montserrat:wght@600;700;800&display=swap" rel="stylesheet">

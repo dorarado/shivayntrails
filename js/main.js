@@ -258,6 +258,9 @@ function loadStoredReviews(track) {
     try {
         const stored = JSON.parse(localStorage.getItem('shivayan_user_reviews') || '[]');
         if (Array.isArray(stored) && stored.length > 0) {
+            // Hide the empty-state placeholder when real reviews exist
+            const placeholder = document.getElementById('empty-review-placeholder');
+            if (placeholder) placeholder.style.display = 'none';
             stored.forEach(r => {
                 const card = createReviewCardElement(r);
                 track.insertBefore(card, track.firstChild);
@@ -369,6 +372,9 @@ window.submitCustomerReview = function(e) {
     // Prepend to DOM
     const track = document.getElementById('testimonial-track');
     if (track) {
+        // Hide placeholder when a real review is added
+        const placeholder = document.getElementById('empty-review-placeholder');
+        if (placeholder) placeholder.style.display = 'none';
         const newCard = createReviewCardElement(newReview);
         track.insertBefore(newCard, track.firstChild);
         if (typeof lucide !== 'undefined') lucide.createIcons();

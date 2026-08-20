@@ -1394,7 +1394,7 @@ window.ShivayanData = {
             title: 'Spiti vs Ladakh: Which Himalayan Road Trip Should You Choose in 2026?',
             readTime: '5 min read',
             category: 'Road Trips & Guides',
-            author: 'Mayank Biswas (Founder)',
+            author: 'Mayank Biswas (Senior High-Altitude Trek Leader)',
             date: 'August 2026',
             image: 'assets/images/blogs/spiti-vs-ladakh.jpg',
             excerpt: "The Himalayas don't offer mere vacations. They offer transformation. For road trip lovers in India, two names dominate every bucket list: Spiti Valley and Ladakh. Here is the definitive breakdown to help you choose your dream circuit in 2026.",
@@ -1410,7 +1410,7 @@ window.ShivayanData = {
             title: 'The Rise of Micro-Adventures: Why Weekend Treks Are the New Escape in 2026',
             readTime: '4 min read',
             category: 'Trekking Trends',
-            author: 'Shreya Kothiyal (Marketing Head)',
+            author: 'Vanshika Dhyani (Head of Brand & Storytelling)',
             date: 'July 2026',
             image: 'assets/images/blogs/micro-adventures.jpg',
             excerpt: "Between demanding corporate schedules and shrinking leave balances, the modern traveller has pivoted to something smarter: the micro-adventure. How 3-day weekend treks deliver maximum reset with zero work disruption.",
@@ -1426,7 +1426,7 @@ window.ShivayanData = {
             title: 'Why Group Travel Is the New Luxury for Gen Z & Millennials in 2026',
             readTime: '4 min read',
             category: 'Travel Culture',
-            author: 'Saksham Sharma (Co-Founder)',
+            author: 'Saksham Sharma (Co-Founder & Head of Operations)',
             date: 'June 2026',
             image: 'assets/images/blogs/group-travel.jpg',
             excerpt: "Luxury once meant five-star gilded lobbies. In 2026, luxury is a group of strangers-turned-friends sharing hot chai at 12,000 feet after conquering a mountain summit together.",
@@ -1440,48 +1440,61 @@ window.ShivayanData = {
     ],
 
     // ══════════════════════════════════════════════════
-    // GALLERY (24 Filtered Mountain Photographs)
+    // GALLERY (37 Authentic Mountain Photographs)
     // ══════════════════════════════════════════════════
     gallery: [
-        { id: 1, src: 'assets/images/gallery/gallery-1.jpg', title: 'Kedarnath Temple Glacial Sunrise', category: 'yatra', tag: 'Sacred Yatra', location: 'Garhwal Himalayas' },
-        { id: 2, src: 'assets/images/gallery/gallery-2.jpg', title: 'Kedarkantha Summit Ridge & Snow Peaks', category: 'treks', tag: 'Winter Trek', location: 'Govind Sanctuary' },
-        { id: 3, src: 'assets/images/gallery/gallery-3.jpg', title: 'Turquoise Waters of Naini Lake', category: 'getaways', tag: 'Scenic Getaway', location: 'Nainital' },
-        { id: 4, src: 'assets/images/gallery/gallery-4.jpg', title: 'Pristine Alpine Lake of Kedartal', category: 'treks', tag: 'Glacial Trek', location: 'Gangotri Range' },
-        { id: 5, src: 'assets/images/gallery/gallery-5.jpg', title: 'Tungnath Temple & Chandrashila Ridge', category: 'treks', tag: 'Temple Trek', location: 'Chopta' },
-        { id: 6, src: 'assets/images/gallery/gallery-6.jpg', title: 'Jibhi Wooden Cottages & Pine Forests', category: 'getaways', tag: 'Riverside Retreat', location: 'Banjar Valley' },
-        { id: 7, src: 'assets/images/gallery/gallery-7.jpg', title: 'Dayara Bugyal Endless Velvet Meadows', category: 'treks', tag: 'Alpine Meadow', location: 'Uttarkashi' },
-        { id: 8, src: 'assets/images/gallery/gallery-8.jpg', title: 'Holy Badrinath Temple on Alaknanda River', category: 'yatra', tag: 'Sacred Yatra', location: 'Chamoli' },
-        { id: 9, src: 'assets/images/gallery/gallery-9.jpg', title: 'Brahmatal Frozen Lake Camping', category: 'treks', tag: 'Winter Camp', location: 'Trishul Massif' },
-        { id: 10, src: 'assets/images/gallery/gallery-10.jpg', title: 'Auli Ski Slopes & Nanda Devi Wall', category: 'getaways', tag: 'Ski Resort', location: 'Joshimath' },
-        { id: 11, src: 'assets/images/gallery/gallery-11.jpg', title: 'Valley of Flowers UNESCO Blooming Carpet', category: 'treks', tag: 'Flora & Fauna', location: 'Nanda Devi Biosphere' },
-        { id: 12, src: 'assets/images/gallery/gallery-12.jpg', title: 'Spiti Valley Key Monastery Perched on Hill', category: 'getaways', tag: 'Monastery Circuit', location: 'Spiti Valley' },
-        { id: 13, src: 'assets/images/gallery/gallery-13.jpg', title: 'Har Ki Dun Ancient Wooden Osla Village', category: 'treks', tag: 'Heritage Trek', location: 'Supin Valley' },
-        { id: 14, src: 'assets/images/gallery/gallery-14.jpg', title: 'White-Water Rafting on the Holy Ganges', category: 'getaways', tag: 'Adventure Sports', location: 'Rishikesh' },
-        { id: 15, src: 'assets/images/gallery/gallery-15.jpg', title: 'Kashmir Great Lakes Gadsar Pass Vista', category: 'treks', tag: 'Alpine Lakes', location: 'Sonamarg' },
-        { id: 16, src: 'assets/images/gallery/gallery-16.jpg', title: 'Chitkul Hindustan Ka Akhiri Gaon', category: 'getaways', tag: 'Border Village', location: 'Kinnaur' },
-        { id: 17, src: 'assets/images/gallery/gallery-17.jpg', title: 'Om Parvat Sacred Snow Inscription', category: 'yatra', tag: 'Mystic Yatra', location: 'Vyas Valley' },
-        { id: 18, src: 'assets/images/gallery/gallery-18.jpg', title: 'Harsil Apple Orchards & Bhagirathi', category: 'getaways', tag: 'Apple Valley', location: 'Uttarkashi' },
-        { id: 19, src: 'assets/images/gallery/gallery-19.jpg', title: 'Bali Pass Razor-Edge Glacier Crossing', category: 'treks', tag: 'Technical Pass', location: 'Ruinsara' },
-        { id: 20, src: 'assets/images/gallery/gallery-20.jpg', title: 'Tandem Paragliding Flight over Bir Valley', category: 'getaways', tag: 'Paragliding', location: 'Bir Billing' },
-        { id: 21, src: 'assets/images/gallery/gallery-21.jpg', title: 'Stargazing Campsite in Nag Tibba', category: 'treks', tag: 'Night Sky', location: 'Garhwal' },
-        { id: 22, src: 'assets/images/gallery/gallery-22.jpg', title: 'Dal Lake Sunset Shikara in Srinagar', category: 'getaways', tag: 'Kashmir Classic', location: 'Srinagar' },
-        { id: 23, src: 'assets/images/gallery/gallery-23.jpg', title: 'Gomukh Snout Origin of the Ganges', category: 'treks', tag: 'Sacred Glacier', location: 'Gangotri' },
-        { id: 24, src: 'assets/images/gallery/gallery-24.jpg', title: 'Thar Desert Camel Safari at Sunset', category: 'getaways', tag: 'Desert Safari', location: 'Jaisalmer' }
+        // ★ HIGHLIGHT PHOTOS (pinned at top)
+        { id: 1, src: 'assets/images/gallery/gallery-53.jpg', title: 'Shivayan Trails Banner on Snow Summit', category: 'treks', tag: 'Summit Flag', location: 'Kedarkantha' },
+        { id: 2, src: 'assets/images/gallery/gallery-54.jpg', title: 'Panoramic Mountain Group Shot', category: 'treks', tag: 'Group Trek', location: 'Uttarakhand' },
+        // ── Authentic gallery (user-provided photos) ──
+        { id: 3, src: 'assets/images/gallery/gallery-25.jpg', title: 'Group Vibes on Green Alpine Meadow', category: 'treks', tag: 'Group Trek', location: 'Uttarakhand' },
+        { id: 4, src: 'assets/images/gallery/gallery-26.jpg', title: 'Mountain Top Batch with Blue Skies', category: 'treks', tag: 'Summit Group', location: 'Himachal Pradesh' },
+        { id: 5, src: 'assets/images/gallery/gallery-27.jpg', title: 'Friends Among the Deodar Forest', category: 'getaways', tag: 'Forest Retreat', location: 'Himachal Pradesh' },
+        { id: 6, src: 'assets/images/gallery/gallery-28.jpg', title: 'Raghupur Fort Summit Celebration', category: 'treks', tag: 'Fort Trek', location: 'Himachal Pradesh' },
+        { id: 7, src: 'assets/images/gallery/gallery-29.jpg', title: 'Batch at Jibhi Waterfall Entrance', category: 'getaways', tag: 'Waterfall Visit', location: 'Jibhi, Banjar' },
+        { id: 8, src: 'assets/images/gallery/gallery-30.jpg', title: 'Spiti Valley Rooftop Adventure Ride', category: 'getaways', tag: 'Road Trip', location: 'Spiti Valley' },
+        { id: 9, src: 'assets/images/gallery/gallery-31.jpg', title: 'Team at Key Monastery Hilltop', category: 'getaways', tag: 'Monastery Visit', location: 'Key, Spiti Valley' },
+        { id: 10, src: 'assets/images/gallery/gallery-32.jpg', title: 'Snow-Capped Valley Group Photo', category: 'getaways', tag: 'Mountain Group', location: 'Lahaul Valley' },
+        { id: 11, src: 'assets/images/gallery/gallery-33.jpg', title: 'Traveller Van Rooftop Fun in Spiti', category: 'getaways', tag: 'Road Trip', location: 'Spiti Valley' },
+        { id: 12, src: 'assets/images/gallery/gallery-34.jpg', title: 'Excited Travellers Inside the Tempo', category: 'getaways', tag: 'Journey Moments', location: 'Himachal Pradesh' },
+        { id: 13, src: 'assets/images/gallery/gallery-35.jpg', title: 'Chicham Bridge Group Celebration', category: 'getaways', tag: 'Bridge Visit', location: 'Chicham, Spiti' },
+        { id: 14, src: 'assets/images/gallery/gallery-36.jpg', title: 'Batch Group at Sissu Snow Peaks', category: 'getaways', tag: 'Mountain Getaway', location: 'Sissu, Lahaul' },
+        { id: 15, src: 'assets/images/gallery/gallery-37.jpg', title: 'Kedarnath Temple Festive Marigold Darshan', category: 'yatra', tag: 'Sacred Yatra', location: 'Kedarnath' },
+        { id: 16, src: 'assets/images/gallery/gallery-38.jpg', title: 'Mountain Guide with Alpine Dogs on Bugyal', category: 'treks', tag: 'Alpine Life', location: 'Garhwal Himalayas' },
+        { id: 17, src: 'assets/images/gallery/gallery-39.jpg', title: 'High-Altitude Base Camp at Sunset', category: 'treks', tag: 'Base Camp', location: 'Garhwal Himalayas' },
+        { id: 18, src: 'assets/images/gallery/gallery-40.jpg', title: 'Snow Camp Tents Below Glacial Peaks', category: 'treks', tag: 'Winter Camp', location: 'Garhwal Himalayas' },
+        { id: 19, src: 'assets/images/gallery/gallery-41.jpg', title: 'Kedarnath Temple Yatra Group Darshan', category: 'yatra', tag: 'Sacred Yatra', location: 'Kedarnath' },
+        { id: 20, src: 'assets/images/gallery/gallery-42.jpg', title: 'Kedarkantha Summit Batch with Stone Cairns', category: 'treks', tag: 'Summit Trek', location: 'Kedarkantha' },
+        { id: 21, src: 'assets/images/gallery/gallery-43.jpg', title: 'Trek Team Resting on Green Alpine Meadow', category: 'treks', tag: 'Alpine Meadow', location: 'Garhwal Himalayas' },
+        { id: 22, src: 'assets/images/gallery/gallery-44.jpg', title: 'Snow Patch Rest with Trekking Poles', category: 'treks', tag: 'Winter Trek', location: 'Garhwal Himalayas' },
+        { id: 23, src: 'assets/images/gallery/gallery-45.jpg', title: 'Forest Trail Rest Stop with Guides', category: 'treks', tag: 'Forest Trail', location: 'Uttarakhand' },
+        { id: 24, src: 'assets/images/gallery/gallery-46.jpg', title: 'Summit Cairn Group at Golden Hour', category: 'treks', tag: 'Summit Trek', location: 'Kedarkantha' },
+        { id: 25, src: 'assets/images/gallery/gallery-47.jpg', title: 'Rustic Wooden Shelter in Alpine Bugyal', category: 'treks', tag: 'Alpine Life', location: 'Garhwal Himalayas' },
+        { id: 26, src: 'assets/images/gallery/gallery-48.jpg', title: 'Batch Summit Achievement at Stone Cairns', category: 'treks', tag: 'Summit Trek', location: 'Kedarkantha' },
+        { id: 27, src: 'assets/images/gallery/gallery-49.jpg', title: 'Meadow Chill with Mountain Shepherd Dog', category: 'treks', tag: 'Alpine Life', location: 'Garhwal Himalayas' },
+        { id: 28, src: 'assets/images/gallery/gallery-50.jpg', title: 'Mountain Group Photo with Meadow Backdrop', category: 'treks', tag: 'Group Trek', location: 'Uttarakhand' },
+        { id: 29, src: 'assets/images/gallery/gallery-51.jpg', title: 'Batch at Snowy Mountain Pass', category: 'treks', tag: 'High Pass', location: 'Uttarakhand' },
+        { id: 30, src: 'assets/images/gallery/gallery-52.jpg', title: 'Campfire Group on Mountain Trail', category: 'treks', tag: 'Trail Moments', location: 'Garhwal Himalayas' },
+        { id: 31, src: 'assets/images/gallery/gallery-55.jpg', title: 'Green Meadow Batch Photo with Mist', category: 'treks', tag: 'Alpine Meadow', location: 'Uttarakhand' },
+        { id: 32, src: 'assets/images/gallery/gallery-56.jpg', title: 'Mountain Temple Summit with Flags', category: 'yatra', tag: 'Summit Temple', location: 'Garhwal Himalayas' },
+        { id: 33, src: 'assets/images/gallery/gallery-57.jpg', title: 'Trekkers Rest Under Clear Blue Sky', category: 'treks', tag: 'Trail Moments', location: 'Garhwal Himalayas' },
+        { id: 34, src: 'assets/images/gallery/gallery-58.jpg', title: 'Ridge Trail Batch with Snow Panorama', category: 'treks', tag: 'Ridge Trek', location: 'Garhwal Himalayas' },
+        { id: 35, src: 'assets/images/gallery/gallery-59.jpg', title: 'Chicham Bridge Group at Highest Bridge', category: 'getaways', tag: 'Bridge Visit', location: 'Chicham, Spiti' },
+        { id: 36, src: 'assets/images/gallery/gallery-60.jpg', title: 'Green Bugyal Panorama with Pine Forest', category: 'treks', tag: 'Alpine Meadow', location: 'Garhwal Himalayas' },
+        { id: 37, src: 'assets/images/gallery/gallery-61.jpg', title: 'Batch Journey Snapshot at Hilltop', category: 'treks', tag: 'Group Trek', location: 'Himachal Pradesh' }
     ],
 
     // ══════════════════════════════════════════════════
-    // TEAM PROFILES (9 Dedicated Mountain Professionals)
+    // TEAM PROFILES (7 Dedicated Mountain Professionals)
     // ══════════════════════════════════════════════════
     team: [
-        { initials: 'MB', name: 'Mayank Biswas', role: 'Founder & Expedition Director', bio: 'Mayank founded Shivayan Trails with a resolute mission: to deliver deeply rooted, safe, and transformative Himalayan journeys. From scouting remote alpine trails to setting stringent safety standards, he ensures every expedition reflects authentic mountain stewardship.' },
-        { initials: 'SS', name: 'Saksham Sharma', role: 'Co-Founder & Head of Operations', bio: 'Saksham shapes the growth and operational precision of Shivayan Trails. With extensive on-ground experience across Himachal and Uttarakhand, he coordinates seamless logistics, emergency backup networks, and local mountain community partnerships.' },
-        { initials: 'SK', name: 'Shreya Kothiyal', role: 'Head of Brand & Storytelling', bio: 'Shreya directs brand communication, traveller outreach, and community engagement. She focuses on telling real mountain stories that celebrate local Himalayan culture, environmental consciousness, and authentic wilderness experiences.' },
-        { initials: 'AN', name: 'Akshat Negi', role: 'Head of Legal & Compliance', bio: 'Akshat oversees all legal frameworks, environmental clearances, and government forest department liaisons. He ensures transparency, traveller safety compliance, and ethical tourism governance.' },
-        { initials: 'VS', name: 'Victor Samson', role: 'Head of Technology & Systems', bio: 'Victor architected the digital infrastructure and booking systems at Shivayan Trails. He ensures blazing-fast discovery, seamless mobile experience, instant booking communication, and dependable operational technology.' },
-        { initials: 'HC', name: 'Hemant Chauhan', role: 'Senior Field Operations Lead', bio: 'Hemant manages ground deployment, high-altitude base camps, technical gear audits, and kitchen logistics. His vigilant eye ensures safety, wholesome hot food, and discipline on every trek.' },
-        { initials: 'HD', name: 'Harsh Dogra', role: 'Head of Human Resources & Training', bio: 'Harsh leads talent acquisition and guide certification. He trains local mountain youth into certified Wilderness First Responders (WFR) and disciplined trail leaders who put traveller safety above all else.' },
-        { initials: 'MA', name: 'Musharaf Ali Khan', role: 'Lead Paragliding Pilot & Safety Instructor', bio: 'A certified master paragliding pilot ranked among the Top 10 in India, Musharaf boasts thousands of air hours across the Himalayas. He oversees all flight safety protocols and aero-adventure experiences.' },
-        { initials: 'VD', name: 'Vidit Dobhal', role: 'Senior High-Altitude Trek Leader', bio: 'Vidit specialises in technical pass crossings (Bali Pass, Rupin Pass, Kedartal). His calm decision-making in adverse weather and deep knowledge of Himalayan flora and terrain make him a trusted presence on challenging routes.' }
+        { initials: 'VD', name: 'Vidit Dobhal', role: 'Founder & Expedition Director', bio: 'Vidit founded Shivayan Trails to deliver deeply rooted, safe, and transformative Himalayan journeys. From scouting remote alpine trails to setting stringent safety standards, he ensures authentic mountain stewardship.' },
+        { initials: 'SS', name: 'Saksham Sharma', role: 'Co-Founder & Head of Operations', bio: 'Saksham shapes operational precision across Himachal and Uttarakhand. He coordinates seamless logistics, emergency backup networks, and trusted mountain community partnerships.' },
+        { initials: 'VD', name: 'Vanshika Dhyani', role: 'Head of Brand & Storytelling', bio: 'Vanshika directs brand communication and community engagement, telling real mountain stories that celebrate local Himalayan culture and environmental consciousness.' },
+        { initials: 'MA', name: 'Musharaf Ali Khan', role: 'Lead Paragliding Pilot (Top 10 India)', bio: 'Ranked among the Top 10 paragliding pilots in India with thousands of air hours across the Himalayas. He oversees aero-adventure safety and flight control in Bir Billing.' },
+        { initials: 'MB', name: 'Mayank Biswas', role: 'Senior High-Altitude Trek Leader', bio: 'Specialises in technical passes (Bali Pass, Rupin Pass, Kedartal). His calm leadership in mountain weather makes him a dependable presence on high trails.' },
+        { initials: 'HC', name: 'Hemant Chauhan', role: 'Field Operations & Gear Lead', bio: 'Manages high-altitude base camps, technical gear audits, and kitchen logistics to ensure hot nutritious food and uncompromised safety gear on every trek.' },
+        { initials: 'SN', name: 'Shubham Negi', role: 'Technical Head', bio: 'Oversees digital infrastructure, online booking systems, and tech innovations at Shivayan Trails to ensure seamless digital experiences for explorers.' }
     ]
 };
 

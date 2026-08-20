@@ -11,10 +11,12 @@
     <meta property="og:title" content="Shivayan Trails | Elevate Your Adventure">
     <meta property="og:description" content="Curated Himalayan treks, serene getaways, and sacred pilgrimages — crafted for the adventurer in you.">
     <meta property="og:type" content="website">
-    <!-- Favicon / Website Icons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon-32.png">
+    <!-- Favicon / Website Icons (Google Search & Browser standard) -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="48x48" href="assets/images/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/favicon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/images/favicon-512.png">
-    <link rel="apple-touch-icon" href="assets/images/logo.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon-512.png">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,23 +32,20 @@
     <link rel="stylesheet" href="css/advanced.css">
     <link rel="stylesheet" href="css/trips-and-pages.css">
 
-    <!-- Schema.org Structured Data -->
+    <!-- Schema.org Structured Data with Official Logo for Google Knowledge Graph & Search -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "TravelAgency",
         "name": "Shivayan Trails",
+        "image": "https://shivayantrails.com/assets/images/logo.png",
+        "logo": "https://shivayantrails.com/assets/images/favicon-512.png",
         "description": "Curated Himalayan treks, serene getaways, and sacred pilgrimages across Uttarakhand",
         "url": "https://shivayantrails.com",
         "telephone": "+91-9058344407",
         "email": "shivayantrails@gmail.com",
         "foundingDate": "2020",
-        "areaServed": "Uttarakhand, India",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "4.8",
-            "reviewCount": "320"
-        }
+        "areaServed": "Uttarakhand, India"
     }
     </script>
 </head>
@@ -513,8 +512,7 @@
                 <div class="reviews-action-bar">
                     <div class="rating-overview-pill">
                         <div class="stars-gold">★★★★★</div>
-                        <span class="rating-num">4.9 / 5.0</span>
-                        <span class="rating-count">&bull; 320+ Verified Reviews</span>
+                        <span class="rating-num">Share Your Experience</span>
                     </div>
                     <button type="button" class="btn-write-review" onclick="openReviewModal()">
                         <i data-lucide="edit-3"></i>
@@ -525,78 +523,19 @@
             
             <div class="testimonials-carousel" id="testimonials-carousel">
                 <div class="testimonial-track" id="testimonial-track">
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">★★★★★</div>
+                    <!-- Real user reviews load here from localStorage -->
+                    <div class="testimonial-card" id="empty-review-placeholder">
+                        <div class="testimonial-stars" style="color: var(--color-gold);">★★★★★</div>
                         <blockquote class="testimonial-quote">
-                            "The Kedarkantha trek was an absolute dream! The guides were incredibly knowledgeable and made sure everyone felt safe. The campsite views were breathtaking. Will definitely book again!"
+                            "Be the first to share your Shivayan Trails experience! Click 'Write a Review' above to tell us about your mountain journey."
                         </blockquote>
                         <div class="testimonial-author">
                             <div class="author-avatar">
-                                <i data-lucide="user-circle"></i>
+                                <i data-lucide="message-square-plus"></i>
                             </div>
                             <div class="author-info">
-                                <strong>Priya Sharma</strong>
-                                <span>Kedarkantha Trek · Delhi</span>
-                            </div>
-                            <div class="verified-badge">
-                                <i data-lucide="badge-check"></i> Verified
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <blockquote class="testimonial-quote">
-                            "Our family's Char Dham Yatra was perfectly organised. From transport to accommodation, everything was seamless. The team's local knowledge made the spiritual journey truly meaningful."
-                        </blockquote>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i data-lucide="user-circle"></i>
-                            </div>
-                            <div class="author-info">
-                                <strong>Rajesh Patel</strong>
-                                <span>Char Dham Yatra · Mumbai</span>
-                            </div>
-                            <div class="verified-badge">
-                                <i data-lucide="badge-check"></i> Verified
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <blockquote class="testimonial-quote">
-                            "We took our college batch of 30 students on the Chopta trek. Shivayan Trails handled everything beautifully — logistics, safety, food. The students are still talking about it months later!"
-                        </blockquote>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i data-lucide="user-circle"></i>
-                            </div>
-                            <div class="author-info">
-                                <strong>Dr. Ananya Mehta</strong>
-                                <span>Group Trek · Bangalore</span>
-                            </div>
-                            <div class="verified-badge">
-                                <i data-lucide="badge-check"></i> Verified
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-card">
-                        <div class="testimonial-stars">★★★★★</div>
-                        <blockquote class="testimonial-quote">
-                            "As a solo female traveller, safety was my top concern. The Shivayan team made me feel completely at ease. The Valley of Flowers trek was magical. Can't recommend them enough!"
-                        </blockquote>
-                        <div class="testimonial-author">
-                            <div class="author-avatar">
-                                <i data-lucide="user-circle"></i>
-                            </div>
-                            <div class="author-info">
-                                <strong>Meera Kapoor</strong>
-                                <span>Valley of Flowers · Pune</span>
-                            </div>
-                            <div class="verified-badge">
-                                <i data-lucide="badge-check"></i> Verified
+                                <strong>Your Story Awaits</strong>
+                                <span>Share your trek experience</span>
                             </div>
                         </div>
                     </div>
@@ -612,28 +551,7 @@
                     </button>
                 </div>
             </div>
-            
-            <div class="trust-strip" data-animate="fade-up">
-                <div class="trust-item">
-                    <span class="trust-score">4.8/5</span>
-                    <span class="trust-source">Google Reviews</span>
-                </div>
-                <div class="trust-divider"></div>
-                <div class="trust-item">
-                    <span class="trust-score">4.9/5</span>
-                    <span class="trust-source">TripAdvisor</span>
-                </div>
-                <div class="trust-divider"></div>
-                <div class="trust-item">
-                    <span class="trust-score">320+</span>
-                    <span class="trust-source">Verified Reviews</span>
-                </div>
-                <div class="trust-divider"></div>
-                <div class="trust-item">
-                    <span class="trust-score">100%</span>
-                    <span class="trust-source">Safety Certified</span>
-                </div>
-            </div>
+
         </div>
     </section>
 
@@ -871,10 +789,12 @@
                     </a>
                     <p>Curated Himalayan experiences — treks, getaways, and sacred journeys crafted with care.</p>
                     <div class="footer-social">
-                        <a href="#" aria-label="Instagram" class="social-link"><i data-lucide="instagram"></i></a>
-                        <a href="#" aria-label="Facebook" class="social-link"><i data-lucide="facebook"></i></a>
-                        <a href="#" aria-label="YouTube" class="social-link"><i data-lucide="youtube"></i></a>
-                        <a href="#" aria-label="LinkedIn" class="social-link"><i data-lucide="linkedin"></i></a>
+                        <a href="https://www.instagram.com/shivayantrails/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link" title="Follow us on Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="https://wa.me/919058344407" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" class="social-link" title="Chat on WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        </a>
                     </div>
                 </div>
                 

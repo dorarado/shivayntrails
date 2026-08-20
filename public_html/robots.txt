@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Allow: /images/
+Allow: /favicon.ico
+
+# Explicitly allow Googlebot-Image
+User-agent: Googlebot-Image
+Allow: /
+
+Sitemap: https://shivayantrails.com/sitemap.xml
